@@ -42,8 +42,8 @@
       </div>
     </div>
     
-    <script src="/js/customtwitter.js" type="text/javascript" charset="utf-8"></script>
-    <script src="http://twitter.com/statuses/user_timeline/matschaffer.json?callback=twitterCallback&amp;count=6" type="text/javascript" charset="utf-8"></script>
+    {% include jsapi.html %}
+    {% include twitter.html %}
     <script src="/js/disqus_permalinks.js" type="text/javascript" charset="utf-8"></script>
     {% for js in page.js %}
       <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
