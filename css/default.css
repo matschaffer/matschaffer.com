@@ -6,12 +6,23 @@ body {
   font-family: Georgia, serif;
   font-size: 12pt;
   color: white;
-  background: #222;
+  background: #444;
 }
 
-h1, h2, h3 {
+.sash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
+h1, h2, h3, a.home {
   font-family: Helvetica, sans-serif;
   letter-spacing: 1px;
+}
+
+h1 {
+  margin-top: 20px;
 }
 
 h2 {
@@ -19,7 +30,7 @@ h2 {
 }
 
 a {
-  color: #C75E2B;
+  color: #EF7600;
 }
 
 h2 a {
@@ -51,18 +62,18 @@ pre {
   float: right;
 }
 
-.header {
-  height: 65px;
-  line-height: 65px;
+#post h1 {
+  margin-bottom: 5px;
 }
 
-#post a.home {
-  position: relative;
-  left: -20px;
-  margin-right: 20px;
-  padding-left: 30px;
-  float: left;
-  text-transform: uppercase;
+a.home {
+  display: block;
+  padding: 4px 0 10px 55px;
+  margin-bottom: 23px;
+  color: #ccc;
+  font-size: 9pt;
+  text-decoration: none;
+  background: url("/images/larrow.png") no-repeat;
 }
 
 #related h3 span {
@@ -93,7 +104,7 @@ pre {
 
 #flickr .flickr_badge_image {
   float: left;
-  border: 1px solid #C75E2B;
+  border: 1px solid #EF7600;
   background: white;
   padding: 3px;
   margin: 0 17px 17px 0;
