@@ -5,14 +5,34 @@
 body {
   font-family: Georgia, serif;
   font-size: 12pt;
+  color: white;
+  background: #222;
 }
 
 h1, h2, h3 {
   font-family: Helvetica, sans-serif;
+  letter-spacing: 1px;
 }
 
 h2 {
   font-size: 13pt;
+}
+
+a {
+  color: #C75E2B;
+}
+
+h2 a {
+  text-decoration: none;
+}
+
+pre {
+  margin: 0;
+}
+
+.highlight {
+  padding: 5px;
+  border: 1px solid gray;
 }
 
 #wrap {
@@ -21,8 +41,7 @@ h2 {
 }
 
 #main {
-  background: #AED093;
-  width: 700px;
+  width: 650px;
   float: left;
   padding: 0 20px;
 }
@@ -30,10 +49,6 @@ h2 {
 #side {
   width: 250px;
   float: right;
-}
-
-#side h2 a {
-  text-decoration: none;
 }
 
 .header {
@@ -78,9 +93,14 @@ h2 {
 
 #flickr .flickr_badge_image {
   float: left;
-  border: 1px solid gray;
+  border: 1px solid #C75E2B;
+  background: white;
   padding: 3px;
   margin: 0 17px 17px 0;
+}
+
+#flickr .flickr_badge_image img {
+  border: 0;
 }
 
 #photos {
