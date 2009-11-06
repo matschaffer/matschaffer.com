@@ -13,7 +13,8 @@ module J
 end
 
 conf = J::EnvironmentConfig.new
-env = J::Environment.new(java.io.File.new('/opt/data/bdb'), conf)
+env = J::Environment.new(java.io.File.new('/opt/data/bdb'),
+                         conf)
 
 if ARGV.length == 2
   env.get_database_names.each do |name|
