@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>{{ page.title }}</title>
+    <link rel="openid.delegate" href="http://openid.claimid.com/schapht" />
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+    {% for css in page.css %}
+      <link rel="stylesheet" href="{{ css }}" type="text/css" />
+    {% endfor %}
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="main">
+        {{ content }}
+      </div>
+      <div id="side">
+        <div id="flickr">
+          <div id="photos">
+            <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=49154856%40N00"></script>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div id="about">
+          <h2><a href="mailto:mat@schaffer.me">mat@schaffer.me</a></h2>
+          <p>A live and code in Philadelphia, Pennsylvania. I travel and take pictures when I can and also have family in Japan.</p>
+          <p>マイホームページへよこそう！フィラデルフィアで働くウェブのプログラマです。旅行へ行って写真をとることがすきです。</p>
+        </div>
+        <div id="twitter">
+          <h2><a href="http://twitter.com/matschaffer" rel="me">@matschaffer</a></h2>
+          <ul id="twitter_update_list"><li class="loading">Loading tweets...</li></ul>
+        </div>
+        <div id="delicious">
+          <h2><a href="http://del.icio.us/schapht" rel="me">del.icio.us/schapht</a></h2>
+          <div id="bookmarks">Loading bookmarks...</div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="/js/customtwitter.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://twitter.com/statuses/user_timeline/matschaffer.json?callback=twitterCallback2&amp;count=4" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/disqus_permalinks.js" type="text/javascript" charset="utf-8"></script>
+    {% for js in page.js %}
+      <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
+    {% endfor %}
+  </body>
+</html>

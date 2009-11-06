@@ -1,0 +1,6 @@
+auto: true
+permalink: pretty
+pygments: true
+server: true
+exclude:
+- Rakefile

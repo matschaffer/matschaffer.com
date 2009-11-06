@@ -1,0 +1,27 @@
+---
+layout: default
+css:
+  - http://disqus.com/stylesheets/matschaffer/disqus.css?v=2.0
+js:
+  - /js/disqus_developer.js
+  - http://disqus.com/forums/matschaffer/embed.js
+---
+
+<div id="posts">
+  <div id="post">
+    <a href="/" class="home header">Home</a>
+    <h1 class="header">{{ page.title }}</h1>
+    {{ content }}
+  </div>
+</div>
+
+<div id="related">
+  <h3><span>Generated: </span>Related Posts</h3>
+  <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="disqus_thread"><noscript><a href="http://disqus.com/forums/matschaffer/?url=ref">View the discussion thread.</a></noscript></div>
