@@ -70,8 +70,18 @@ pre {
   margin-bottom: 5px;
 }
 
+#post h2 {
+  clear: both;
+}
+
 #post p {
   line-height: 150%;
+}
+
+#post img.left {
+  float: left;
+  display: block;
+  margin: 0 20px 20px 0;
 }
 
 a.home {

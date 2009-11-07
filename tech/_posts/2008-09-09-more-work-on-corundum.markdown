@@ -1,0 +1,7 @@
+--- 
+layout: post
+title: More work on Corundum
+---
+So last night I did a little more work on <a href="http://github.com/matschaffer/corundum">Corundum</a> (still not totally satisfied with the name). I managed to get most of the pom stuff and JRuby dependency packaged. Now any project that uses it just needs <a href="http://github.com/matschaffer/corundum/tree/master/testapp/pom.xml">this simple pom file</a> and <a href="http://github.com/matschaffer/corundum/tree/master/testapp/src/main/assembly/jruby-complete.xml">this assembly file</a>. The assembly file is still a thorn in my side and hopefully I can figure out how to get it out of there. I'm planning to look at the <a href="http://code.google.com/p/flex-mojos/">flex-mojos</a> project to see how they implement the swc packaging, maybe there's an answer there.
+
+I feel like this exercise has taught me just how inextensible maven really is. Maybe I'm doing it wrong but packaging this experiment for distribution has resulted in 2 sub-projects: one to set up the dependencies and assembly plugin and another to package the <a href="http://github.com/matschaffer/corundum/tree/master/runner/src/main/java/com/cimians/code/corundum/Corundum.java">jruby runner class</a>. And now I fear to think what it will take to release this. I might have to try doing something similar with rake or <a href="http://incubator.apache.org/buildr/">buildr</a> as well just for comparison's sake.
