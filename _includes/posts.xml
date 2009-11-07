@@ -1,0 +1,9 @@
+{% for post in posts %}
+<entry>
+  <title>{{ post.title }}</title>
+  <link href="http://80kv.com{{ post.url }}"/>
+  <updated>{{ post.date | date_to_xmlschema }}</updated>
+  <id>http://80kv.com{{ post.id }}</id>
+  <content type="html">{{ post.content | xml_escape }}</content>
+</entry>
+{% endfor %}

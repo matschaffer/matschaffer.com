@@ -1,5 +1,5 @@
 ---
 layout: atom
 ---
-{% assign posts = site.categories.life %}
+{% assign posts = site.categories.tech %}
 {% include posts.xml %}
