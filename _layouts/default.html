@@ -4,7 +4,12 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>{{ page.title }}</title>
+    <link rel="openid.server" href="http://openid.claimid.com/server" />
     <link rel="openid.delegate" href="http://openid.claimid.com/schapht" />
+
+    <link rel="alternate" type="application/atom+xml" title="All Posts" href="http://feeds.feedburner.com/MatSchaffer" />
+    <link rel="alternate" type="application/atom+xml" title="Tech Posts Only" href="http://feeds.feedburner.com/MatSchafferTechnology" />
+
     <link rel="stylesheet" href="/css/default.css" type="text/css" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
     {% for css in page.css %}
@@ -47,6 +52,7 @@
     
     {% include jsapi.html %}
     {% include twitter.html %}
+    {% include analytics.html %}
     <script src="/js/disqus_permalinks.js" type="text/javascript" charset="utf-8"></script>
     {% for js in page.js %}
       <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
