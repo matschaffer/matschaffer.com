@@ -66,29 +66,38 @@ pre {
   font-size: 11pt;
 }
 
-#post h1 {
+.post h1 {
   margin-bottom: 5px;
 }
 
-#post h2 {
+.post h2 {
   clear: both;
 }
 
-#post p {
+.post p {
   line-height: 150%;
 }
 
-#post img.left {
+.post img.left {
   display: block;
   float: left;
-  margin: 0 20px 20px 0;
+  margin: 20px 20px 20px 0;
 }
 
-#post img.center {
+.post img.center {
   display: block;
   margin: auto;
 }
 
+.post img.right {
+  display: block;
+  float: right;
+  margin: 20px 0 20px 20px;
+}
+
+.highlight pre {
+  overflow: scroll;
+}
 a.home {
   display: block;
   padding: 4px 0 10px 55px;

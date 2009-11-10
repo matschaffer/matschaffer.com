@@ -5,7 +5,7 @@ title: Mat Schaffer's Blog
 <h1>Mat Schaffer's Blog</h1>
 <div id="posts">
 {% for post in site.posts limit:5 %}
-  <div id="post">
+  <div class="post">
     <h2><a href="{{ post.url }}" class="title">{{ post.title }}</a></h2>
     {{ post.content }}
   </div>

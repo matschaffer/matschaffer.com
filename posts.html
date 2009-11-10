@@ -4,8 +4,8 @@ layout: default
 
 <div id="posts">
 {% for post in site.posts %}
-  <div id="post">
-    <h2><a href="{{ post.url }}" class="title">{{ post.title }}</a></h2>
+  <div class="post">
+    <h2><a href="{{ post.url }}" class="title">{{ post.title | xml_escape}}</a></h2>
   </div>
 {% endfor %}
 </div>
