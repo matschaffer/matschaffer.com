@@ -8,10 +8,10 @@ I have a number of tricks in there like tab-completion for both ssh hosts and ra
 
 {% highlight bash %}
 mv ~/.profile ~/.profile.old
-git clone git://github.com/schapht/profile.git ~/.profile.d
+git clone git://github.com/matschaffer/profile.git ~/.profile.d
 ln -s ~/.profile.d/init ~/.profile
 {% endhighlight %}
 
-Or if you have some of your own ideas, just fork my project and have fun! The url for the repository browser is: <a href="http://github.com/schapht/profile/tree/master">http://github.com/schapht/profile/tree/master</a>
+Or if you have some of your own ideas, just fork my project and have fun! The url for the repository browser is: <a href="http://github.com/matschaffer/profile/tree/master">http://github.com/matschaffer/profile/tree/master</a>
 
 Let me know what you think. I'd love to incorporate other tricks that people might have.
