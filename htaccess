@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule projects http://github.com/matschaffer [R,L]
+RewriteRule files/DigitalWorldClock http://cloud.github.com/downloads/matschaffer/digital-world-clock/DigitalWorldClock-1.5.2.zip [R,L]
