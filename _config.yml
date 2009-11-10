@@ -1,6 +1,7 @@
-auto: false
+auto: true
+server: true
 permalink: pretty
 pygments: true
-server: false
+lsi: true
 exclude:
 - Rakefile
