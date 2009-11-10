@@ -1,0 +1,34 @@
+--- 
+layout: post
+title: GTAC 2008 Recap - Part 2
+---
+<h4>Advances in Automated Software Technologies, Elfriede Dustin and Marcus Borch</h4>
+This started with focus on applying hardware testing techniques to software testing. Namely with regards to reusable components (citing <a href="http://koders.com">koders.com</a> and <a href="http://krugle.com">krugle.com</a>). The components in question seemed to largely be toolkits that they use in testing including
+<ul>
+	<li><a href="http://staf.sourceforge.net"><span class="caps">STAX</span>/STAF</a></li>
+	<li>Fire eye – for test data generation</li>
+	<li><a href="http://www.vncrobot.com"><span class="caps">VNC</span> Robot</a> – for noninvasive testing</li>
+	<li><a href="http://www.logwatch.org">logwatch</a>, <a href="http://sourceforge.net/projects/lofimo/">LoFiMo</a> – for log monitoring</li>
+	<li><a href="http://wiki.eclipse.org/index.php/Rich_Client_Platform">Rich client platform</a> (in Eclipse) – for test management</li>
+</ul>
+Beyond the tools mentioned, the bulk of the presentation on a system that they built for generating junit test cases for either C++ or Java logic from excel sheets (the logic translation was done with <span class="caps">ANTLR</span>).  The test spreadsheet was pounded into <span class="caps">XML</span> then into Java then run as tests. When asked why they don’t just interpret the spreadsheet directly they gave an answer regarding the DoD’s requirements for transparency.  The whole thing seemed horribly static to me, but I suppose if your client is our government you probably have to jump through a variety of hoops.
+<h4>Boosting Your Testing Productivity with Groovy, Andres Almiray</h4>
+This talk presented a few things about <a href="http://groovy.codehaus.org">Groovy</a> that I hadn’t heard yet.  First that Groovy supports TestNG out of the box, and also that most Java code can run in the Groovy interpreter without modification. The only java construct which Groovy doesn’t support is inner classes (I’m guessing cause they look like closures).
+
+Andres showed a number of the tricks Groovy is capable of such as closures, mocking and stubbing. It seemed pretty useful that Groovy can also stub existing Java classes and also can masquerade simple hashes as java objects, providing a pretty flexible mocking situation.  The syntax was something like:
+
+{% highlight python %}
+def proxyString = [
+  startsWith: { -> return true }
+] as String
+{% endhighlight %}
+
+The proxyString object will now pass for a String so long as you don’t try to call any methods other than startsWith.
+
+According to Andres, this can also all be dropped into an existing JUnit or TestNG infrastructure by means of eclipse and maven plugins. So I’m thinking my next free-time project might be to rewrite some of comcast.net’s unit tests in Groovy to see just how well it will blend. He also discussed using Groovy with DbUnit for testing databases as well as using it with Easyb for behavior driven development. And also one of participants brought up <a href="http://code.google.com/p/aost/wiki/Tutorial">Tellurium</a>, which apparently uses Groovy to drive selenium.
+
+This was definitely the best overall talk so far. I still don’t think I could support Groovy over Ruby for general purpose development, but it seems to have a solid home for testing Java applications.  I look forward to trying this out on my work projects in the next week or two.
+<h4>Lunch talks</h4>
+Google made the smart move of providing lunch at the conference so we could all stay together.  I sat with developers from a number of different companies and picked up on some cool technologies like <a href="http://www.cs.waikato.ac.nz/~marku/mbt/modeljunit/">ModelJUnit</a> and also got a demo of a unit test correlation webapp that Todd Wells was working on. I even got an introduction to the micro-finance site, <a href="http://kiva.org">Kiva</a> which I could definitely see throwing some money at.
+
+I hope you’re enjoying my <span class="caps">GTAC 2008</span> overview so far. I expect it will take about 3-4 more posts to get it all up here. Feel free to comment if you’d like to see more or less of my own personal commentary, or for any other reason.
