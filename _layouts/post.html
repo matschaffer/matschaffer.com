@@ -15,13 +15,4 @@ js:
   </div>
 </div>
 
-<div id="related">
-  <h3><span>Generated: </span>Related Posts</h3>
-  <ul class="posts">
-    {% for post in site.related_posts limit:3 %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title | xml_escape}}</a></li>
-    {% endfor %}
-  </ul>
-</div>
-
 <div id="disqus_thread"><noscript><a href="http://disqus.com/forums/matschaffer/?url=ref">View the discussion thread.</a></noscript></div>

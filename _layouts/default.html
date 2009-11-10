@@ -44,6 +44,16 @@
           <h2><a href="http://del.icio.us/schapht" rel="me">del.icio.us/schapht</a></h2>
           <!-- <div id="bookmarks">Loading bookmarks...</div> -->
         </div>
+        {% if site.related_posts %}
+          <div id="related">
+            <h2>Possibly related posts</h2>
+            <ul class="posts">
+              {% for post in site.related_posts limit:3 %}
+                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title | xml_escape}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
         <div id="archive">
           <h2><a href="/posts">All posts</a></h2>
         </div>
