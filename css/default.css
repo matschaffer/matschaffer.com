@@ -96,7 +96,7 @@ pre {
 }
 
 .highlight pre {
-  overflow: scroll;
+  overflow: auto;
 }
 a.home {
   display: block;
