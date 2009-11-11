@@ -8,6 +8,10 @@ title: Mat Schaffer's Blog
   <div class="post">
     <h2><a href="{{ post.url }}" class="title">{{ post.title }}</a></h2>
     {{ post.content }}
+    <div class="footer">
+      &mdash; {{ post.date | date_to_string }}
+      <a href="{{ post.url }}/#disqus_thread">Add a comment</a>
+    </div>
   </div>
 {% endfor %}
 </div>

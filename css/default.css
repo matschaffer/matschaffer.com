@@ -26,7 +26,7 @@ h1, #side div {
 }
 
 h2 {
-  font-size: 13pt;
+  font-size: 15pt;
 }
 
 a {
@@ -39,11 +39,6 @@ h2 a {
 
 pre {
   margin: 0;
-}
-
-.highlight {
-  padding: 5px;
-  border: 1px solid gray;
 }
 
 #wrap {
@@ -70,10 +65,6 @@ pre {
   margin-bottom: 5px;
 }
 
-.post h2 {
-  clear: both;
-}
-
 .post p {
   line-height: 150%;
 }
@@ -95,13 +86,21 @@ pre {
   margin: 20px 0 20px 20px;
 }
 
-.highlight pre {
-  overflow: auto;
+.post .footer {
+  color: #eee;
+  border-bottom: 1px solid gray;
+  padding: 6px 0;
+  margin-bottom: 35px;
 }
+
+.post .footer a {
+  float: right;
+}
+
 a.home {
   display: block;
   padding: 4px 0 10px 55px;
-  margin-bottom: 23px;
+  margin-bottom: 27px;
   color: #ccc;
   font-size: 9pt;
   text-decoration: none;

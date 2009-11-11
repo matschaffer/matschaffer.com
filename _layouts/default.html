@@ -63,7 +63,7 @@
     {% include jsapi.html %}
     {% include twitter.html %}
     {% include analytics.html %}
-    <script src="/js/disqus_permalinks.js" type="text/javascript" charset="utf-8"></script>
+    {% include disqus.html %}
     {% for js in page.js %}
       <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
     {% endfor %}
