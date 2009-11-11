@@ -1,1 +1,52 @@
-function twitterCallback(C) { var A = []; for(var D = 0; D < C.length; D++) { var E = C[D].user.screen_name; if (C[D].text[0] == '@') continue; var B = C[D].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(F) { return'<a href="' + F + '">' + F + "</a>"}).replace(/\B@([_a-z0-9]+)/ig, function(F) { return F.charAt(0) + '<a href="http://www.twitter.com/' + F.substring(1) + '">' + F.substring(1) + "</a>"}); A.push("<li><span>" + B + '</span> <a style="font-size:85%" href="http://twitter.com/' + E + "/statuses/" + C[D].id + '">' + relative_time(C[D].created_at) + "</a></li>")} document.getElementById("twitter_update_list").innerHTML = A.join("")} function relative_time(C) { var B = C.split(" "); C = B[1] + " " + B[2] + ", " + B[5] + " " + B[3]; var A = Date.parse(C); var D = (arguments.length > 1) ? arguments[1] : new Date(); var E = parseInt((D.getTime() - A) / 1000); E = E + (D.getTimezoneOffset() * 60); if(E < 60) { return"less than a minute ago"} else { if(E < 120) { return"about a minute ago"} else { if(E < (60 * 60)) { return(parseInt(E / 60)).toString() + " minutes ago"} else { if(E < (120 * 60)) { return"about an hour ago"} else { if(E < (24 * 60 * 60)) { return"about " + (parseInt(E / 3600)).toString() + " hours ago"} else { if(E < (48 * 60 * 60)) { return"1 day ago"} else { return(parseInt(E / 86400)).toString() + " days ago"} } } } } } };
+function updateTweets(json) {
+  function links(text) {
+    return text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, '<a href="$1">$1</a>');
+  }
+
+  function mentions(text) {
+    return text.replace(/\B@([_a-z0-9]+)/ig, '<a href="http://www.twitter.com/$1">@$1</a>');
+  }
+
+  function relativeTime(timeString) {
+    var parts = timeString.split(' ');
+    var time = Date.parse([parts[1], parts[2], parts[5], parts[3]].join(' '));
+    var now = new Date();
+    var seconds = parseInt((now.getTime() - time) / 1000, 10) + now.getTimezoneOffset() * 60;
+    if (seconds < 60) {
+      return "less than a minute ago";
+    } else if (seconds < 120) {
+      return "about a minute ago";
+    } else if (seconds < (60 * 60)) {
+      return parseInt(seconds / 60, 10).toString() + " minutes ago";
+    } else if (seconds < (120 * 60)) {
+      return "about an hour ago";
+    } else if (seconds < (24 * 60 * 60)) {
+      return "about " + parseInt(seconds / 3600, 10).toString() + " hours ago";
+    } else if (seconds < (48 * 60 * 60)) {
+      return "1 day ago";
+    } else {
+      return parseInt(seconds / 86400, 10).toString() + " days ago";
+    }
+  }
+
+  function source(tweet) {
+    return ['<a class="source" href="http://twitter.com/', tweet.user.screen_name, "/statuses/", tweet.id, '">',
+            relativeTime(tweet.created_at), '</a>'].join('');
+  }
+
+  function process(tweet) {
+    return mentions(links(tweet.text)) + source(tweet);
+  }
+
+  var tweetCount = 0,
+      tweets = [];
+
+  $.each(json, function(i) {
+    if (!this.in_reply_to_status_id) {
+      tweets.push("<li>", process(this),"</li>");
+      tweetCount++;
+    }
+    if (tweetCount == 3) { return false; }
+  });
+  $("#twitter_update_list").html(tweets.join(''));
+}

@@ -1,4 +1,3 @@
-* Fix handling of @'s in twitter response.
 * style related posts
 * remove disqus developer flag
 * deploy

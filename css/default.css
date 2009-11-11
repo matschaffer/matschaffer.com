@@ -116,16 +116,20 @@ a.home {
   padding: 0;
 }
 
+#twitter_update_list a {
+  text-decoration: none;
+}
+
+#twitter_update_list a.source {
+  display: block;
+  text-align: right;
+  font-size: 85%;
+}
+
 #twitter_update_list li {
   padding-bottom: 4px;
   margin-bottom: 8px;
   border-bottom: 1px solid gray;
-}
-
-#twitter_update_list li a {
-  display: block;
-  text-decoration: none;
-  text-align: right;
 }
 
 #flickr {
