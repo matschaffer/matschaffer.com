@@ -33,7 +33,7 @@ a {
   color: #EF7600;
 }
 
-h2 a {
+h2 a, a.home, #twitter_update_list a, #related a {
   text-decoration: none;
 }
 
@@ -103,7 +103,6 @@ a.home {
   margin-bottom: 27px;
   color: #ccc;
   font-size: 9pt;
-  text-decoration: none;
   background: url("/images/larrow.png") no-repeat;
 }
 
@@ -111,13 +110,9 @@ a.home {
   text-transform: uppercase;
 }
 
-#twitter_update_list {
+#twitter_update_list, #related ul {
   list-style: none;
   padding: 0;
-}
-
-#twitter_update_list a {
-  text-decoration: none;
 }
 
 #twitter_update_list a.source {
@@ -151,4 +146,11 @@ a.home {
 #photos {
   width: 200px;
   margin: auto;
+}
+
+#related dd {
+  color: #888;
+  font-size: 75%;
+  text-align: right;
+  text-transform: lowercase;
 }
