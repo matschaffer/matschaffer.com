@@ -2,11 +2,15 @@
   clear: both;
 }
 
+body, pre {
+  margin: 0;
+}
+
 body {
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-size: 12pt;
   color: white;
-  background: #444;
+  background: #4C4C4C;
 }
 
 .sash {
@@ -21,8 +25,8 @@ h1, h2, h3, a.home {
   letter-spacing: 1px;
 }
 
-h1, #side div {
-  margin-top: 25px;
+h1 {
+  margin-top: 15px;
 }
 
 h2 {
@@ -37,10 +41,6 @@ h2 a, a.home, #twitter_update_list a, #related a {
   text-decoration: none;
 }
 
-pre {
-  margin: 0;
-}
-
 #wrap {
   margin: auto;
   width: 1000px;
@@ -50,11 +50,17 @@ pre {
   width: 650px;
   float: left;
   padding: 0 20px;
+  background: #333;
+  margin-top: 15px;
 }
 
 #side {
   width: 250px;
   float: right;
+}
+
+#side div {
+  margin-top: 25px;
 }
 
 #side p, #side li {
