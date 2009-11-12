@@ -99,11 +99,10 @@ pre {
 
 a.home {
   display: block;
-  padding: 4px 0 10px 55px;
+  padding: 3px 0 10px 15px;
   margin-bottom: 27px;
   color: #ccc;
   font-size: 9pt;
-  background: url("/images/larrow.png") no-repeat;
 }
 
 #related h3 span {
