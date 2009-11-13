@@ -9,11 +9,13 @@ It's pretty common place to use the <a href="http://maven.apache.org/plugins/mav
 {% highlight xml %}
 <plugin>
   <artifactId>maven-antrun-plugin</artifactId>
-  <dependency>
-    <groupId>org.jruby</groupId>
-    <artifactId>jruby-complete</artifactId>
-    <version>1.4.0</version>
-  </dependency>
+  <dependencies>
+    <dependency>
+      <groupId>org.jruby</groupId>
+      <artifactId>jruby-complete</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+  </dependencies>
   <executions>
     <execution>
       <id>my_script</id>
