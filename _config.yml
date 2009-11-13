@@ -1,4 +1,5 @@
 permalink: /:categories/:year/:month/:title
 pygments: true
 exclude:
-- Rakefile
+  - Rakefile
+  - README
