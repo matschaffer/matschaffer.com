@@ -20,7 +20,7 @@ task :build do
 end
 
 task :default => :auto
-task :deploy => "deploy:local"
+task :deploy => "deploy:dreamhost"
 
 namespace :deploy do
   desc "Deploy to Dreamhost"
