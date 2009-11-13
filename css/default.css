@@ -72,6 +72,16 @@ a.h2, a.home, #twitter_update_list a, #related a {
   font-size: 11pt;
 }
 
+#posts.archive .post {
+  margin-top: 10px;
+}
+
+#posts.archive span {
+  display: block;
+  float: left;
+  width: 100px;
+}
+
 .post h1 {
   margin-bottom: 5px;
 }
