@@ -47,16 +47,6 @@
         <div id="archive">
           <a class="h2" href="/posts.html">all posts</a>
         </div>
-        {% if site.related_posts and false %}
-          <div id="related">
-            <h2>related posts</h2>
-            <dl class="posts">
-              {% for post in site.related_posts limit:3 %}
-                <dt><a href="{{ post.url }}">{{ post.title | xml_escape}}</a></dt><dd>{{ post.date | date_to_string }}</dd>
-              {% endfor %}
-            </dl>
-          </div>
-        {% endif %}
       </div>
     </div>
     

@@ -38,7 +38,7 @@ a {
   color: #EF7600;
 }
 
-a.h2, a.home, #twitter_update_list a, #related a {
+a.h2, a.home, #twitter_update_list a {
   text-decoration: none;
 }
 
@@ -126,11 +126,7 @@ a.home {
   font-size: 9pt;
 }
 
-#related h3 span {
-  text-transform: uppercase;
-}
-
-#twitter_update_list, #related ul {
+#twitter_update_list {
   list-style: none;
   padding: 0;
 }
@@ -166,11 +162,4 @@ a.home {
 #photos {
   width: 200px;
   margin: auto;
-}
-
-#related dd {
-  color: #888;
-  font-size: 75%;
-  text-align: right;
-  text-transform: lowercase;
 }
