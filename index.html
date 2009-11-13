@@ -6,7 +6,7 @@ title: Mat Schaffer's Blog
 <div id="posts">
 {% for post in site.posts limit:5 %}
   <div class="post">
-    <a class="h2" href="{{ post.url }}" class="title">{{ post.title }}</a>
+    <a class="h2" href="{{ post.url }}">{{ post.title }}</a>
     {{ post.content }}
     <div class="footer">
       &mdash; {{ post.date | date_to_string }}
