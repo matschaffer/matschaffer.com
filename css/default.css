@@ -20,7 +20,7 @@ body {
   border: 0;
 }
 
-h1, h2, h3, a.home {
+h1, h2, h3, a.h2, a.home {
   font-family: Helvetica, sans-serif;
   letter-spacing: 1px;
 }
@@ -29,21 +29,22 @@ h1 {
   margin-top: 15px;
 }
 
-h2 {
-  font-size: 15pt;
+a.h2 {
+  font-size: 16pt;
+  font-weight: bold;
 }
 
 a {
   color: #EF7600;
 }
 
-h2 a, a.home, #twitter_update_list a, #related a {
+a.h2, a.home, #twitter_update_list a, #related a {
   text-decoration: none;
 }
 
 #wrap {
   margin: auto;
-  width: 1000px;
+  width: 970px;
 }
 
 #main {
@@ -61,6 +62,10 @@ h2 a, a.home, #twitter_update_list a, #related a {
 
 #side div {
   margin-top: 25px;
+}
+
+#side a.h2, #side h2 {
+  font-size: 13pt;
 }
 
 #side p, #side li {
