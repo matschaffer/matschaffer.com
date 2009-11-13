@@ -5,7 +5,7 @@ title: Hello, Jekyll.
 
 So I just ported my blog from WordPress to [Jekyll](http://jekyllrb.com "jekyll"). 
 
-Why? Because once again while posting my latest [maven trick](/tech/2009/10/23/call-jruby-jython-from-maven/) I got frustrated trying to post `code` in my blog and also get the formatting to work the way I wanted it.
+Why? Because once again while posting my latest [maven trick](/tech/2009/10/call-jruby-jython-from-maven/) I got frustrated trying to post `code` in my blog and also get the formatting to work the way I wanted it.
 
 I think I just prefer [WYSIWYM](http://en.wikipedia.org/wiki/WYSIWYM "WYSIWYM - Wikipedia, the free encyclopedia") to [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG "WYSIWYG - Wikipedia, the free encyclopedia"). But that's just me.
 
