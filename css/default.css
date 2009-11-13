@@ -126,7 +126,7 @@ a.home {
   font-size: 9pt;
 }
 
-#twitter_update_list {
+#twitter_update_list, #bookmark_list {
   list-style: none;
   padding: 0;
 }
@@ -137,9 +137,12 @@ a.home {
   font-size: 85%;
 }
 
-#twitter_update_list li {
+#twitter_update_list li, #bookmark_list li {
   padding-bottom: 4px;
   margin-bottom: 8px;
+}
+
+#twitter_update_list li {
   border-bottom: 1px solid gray;
 }
 

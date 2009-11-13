@@ -42,7 +42,7 @@
         </div>
         <div id="delicious">
           <a class="h2" href="http://del.icio.us/schapht" rel="me">del.icio.us/schapht</a>
-          <!-- <div id="bookmarks">Loading bookmarks...</div> -->
+          <ul id="bookmark_list"><li class="loading">Loading bookmarks...</li></ul>
         </div>
         <div id="archive">
           <a class="h2" href="/posts.html">all posts</a>
@@ -52,8 +52,9 @@
     
     {% include jsapi.html %}
     {% include twitter.html %}
-    {% include analytics.html %}
+    {% include delicious.html %}
     {% include disqus.html %}
+    {% include analytics.html %}
     {% for js in page.js %}
       <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
     {% endfor %}
