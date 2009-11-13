@@ -1,6 +1,6 @@
 def jekyll(opts = nil)
   sh "rm -rf _site"
-  sh ["jekyll", opts].join(" ")
+  sh ["_jekyll/bin/jekyll", opts].join(" ")
   cp "_htaccess", "_site/.htaccess"
 end
 
