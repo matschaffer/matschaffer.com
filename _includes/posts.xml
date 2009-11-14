@@ -1,7 +1,7 @@
 {% for post in posts %}
 <entry>
   <title>{{ post.title | xml_escape }}</title>
-  <link href="http://80kv.com{{ post.url }}"/>
+  <link href="{{site.url}}{{ post.url }}"/>
   <updated>{{ post.date | date_to_xmlschema }}</updated>
   <id>{{ site.url }}{{ post.id }}</id>
   <content type="html">{{ post.content | xml_escape }}</content>
