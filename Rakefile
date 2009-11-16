@@ -1,6 +1,7 @@
 def jekyll(opts = nil)
   sh "rm -rf _site"
-  sh ["_jekyll/bin/jekyll", opts].join(" ")
+  jekyll = Dir["_jekyll/bin/jekyll"].first || "jekyll"
+  sh [jekyll, opts].join(" ")
   cp "_htaccess", "_site/.htaccess"
 end
 
