@@ -10,10 +10,10 @@ RewriteRule ^feed/atom /atom.xml [R=301,L]
 RewriteRule ^tag.*feed /atom.xml [R=301,L]
 
 # Pages
-RewriteRule ^about / [R=301,L]
-RewriteRule ^(home/){0,1}projects http://github.com/matschaffer [R=301,L]
+RewriteRule ^(home/){0,1}projects http://github.com/matschaffer [R,L]
+RewriteRule ^tag / [R,L]
 RewriteRule ^home / [R=301,L]
-RewriteRule ^tag / [R=301,L]
+RewriteRule ^about / [R,L]
 
 # Files
 RewriteRule files/DigitalWorldClock http://cloud.github.com/downloads/matschaffer/digital-world-clock/DigitalWorldClock-1.5.2.zip [R=301,L]
