@@ -1,5 +1,21 @@
 RewriteEngine On
-RewriteRule ^about / [R,L]
-RewriteRule ^projects http://github.com/matschaffer [R,L]
-RewriteRule files/DigitalWorldClock http://cloud.github.com/downloads/matschaffer/digital-world-clock/DigitalWorldClock-1.5.2.zip [R,L]
+
+# Posts
 RewriteRule ^(200[8-9]/.*)$ /tech/$1 [R=301,L]
+
+# Feeds
+RewriteCond %{QUERY_STRING} ^cat=3$
+RewriteRule ^feed/atom/$ /tech/atom.xml? [R=301,L]
+RewriteRule ^feed/atom /atom.xml [R=301,L]
+RewriteRule ^tag.*feed /atom.xml [R=301,L]
+
+# Pages
+RewriteRule ^about / [R=301,L]
+RewriteRule ^(home/){0,1}projects http://github.com/matschaffer [R=301,L]
+RewriteRule ^home / [R=301,L]
+RewriteRule ^tag / [R=301,L]
+
+# Files
+RewriteRule files/DigitalWorldClock http://cloud.github.com/downloads/matschaffer/digital-world-clock/DigitalWorldClock-1.5.2.zip [R=301,L]
+
+ErrorDocument 404 /404.html
