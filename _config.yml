@@ -1,6 +1,6 @@
 url: http://matschaffer.com
 email: mat@schaffer.me
-permalink: /:categories/:year/:month/:title/
+permalink: /:year/:month/:title/
 pygments: true
 exclude:
   - Rakefile
