@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Posts
+RewriteRule ^(tech|life)/(.*)$ /$2 [R,L]
+
 # Feeds
 RewriteCond %{QUERY_STRING} ^cat=3$
 RewriteRule ^feed/atom/$ /tech/atom.xml? [R=301,L]
