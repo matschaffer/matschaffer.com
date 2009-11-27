@@ -1,8 +1,8 @@
 def jekyll(opts = nil)
-  sh "rm -rf _site"
+  sh "rm -rf _site/*"
+  cp "_htaccess", "_site/.htaccess"
   jekyll = Dir["_jekyll/bin/jekyll"].first || "jekyll"
   sh [jekyll, opts].join(" ")
-  cp "_htaccess", "_site/.htaccess"
 end
 
 desc "Start in --auto mode"
