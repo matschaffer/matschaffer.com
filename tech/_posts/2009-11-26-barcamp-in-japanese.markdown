@@ -3,7 +3,7 @@ layout: post
 title: Barcamp Philly, in Japanese
 ---
 
-A little belated, but not too long ago I went to [Barcamp Philly 2009](http://www.barcampphilly.org) with my wife and son. It was a great experience not only to be a part of the blossoming Philly tech scene, but also having my family there encouraged me to branch out a little and head to some really enjoyable talks.
+A little belated, but not too long ago I went to [Barcamp Philly 2009](http://www.barcampphilly.org) with my wife and son. It was a great experience not only to be a part of the blossoming Philly tech scene, but also having my family there encouraged me to branch out a little and head to some really enjoyable talks that I probably wouldn't have otherwise.
 
 Shortly after the event, Kaori posted a writeup in her [Mixi blog](http://mixi.jp/view_diary.pl?id=1338958355&owner_id=11017782). I thought this was really cool and wanted to share it with other folks that might be interested. So I've reposted it here with her permission.
 
