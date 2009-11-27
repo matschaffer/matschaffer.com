@@ -9,7 +9,7 @@ I wanted to do this while retaining history but the [p4svn script](http://p42svn
 
 So instead I decided to use [Git](http://git-scm.com/ "Git - Fast Version Control System") as an intermediary. My initial attempts to do this by way of a git merge or rebase didn't work out. The best I could get was the full source as one commit in subversion. But since git has really solid patch file support, I decided to try using `git format-patch` and `git am` to get the changes from one repository to the other.
 
-The end result was about as good as I could have hoped for. Including `--add-author-from` even put the original Perforce information into the subversion commit logs which was awesome.
+The end result was about as good as I could have hoped for. Including `--add-author-from` even put the original Perforce information into the subversion commit logs which was awesome. The only downside I've seen so far today is that folders that should be deleted aren't always deleted in the final import. I'm guessing this has to do with how git ignores empty directories but svn doesn't. But cleaning them up wasn't too bad for me since the projects had a consistent structure. If the project had some sort of major reorganization happen, you might want to dig into that and try to figure out a better solution.
 
 So here's the script, also checked into my [randomscripts](http://github.com/matschaffer/randomscripts) repository. Feel free to ask any questions or school me on a better way to do this!
 
