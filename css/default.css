@@ -98,7 +98,7 @@ a.h2, a.home, #twitter_update_list a {
 
 .post img.center {
   display: block;
-  margin: auto;
+  margin: 0 auto 20px auto;
 }
 
 .post img.right {
