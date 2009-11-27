@@ -8,7 +8,7 @@
  <id>{{ site.url }}/</id>
  <author>
    <name>Mat Schaffer</name>
-   <email>mat@schaffer.me</email>
+   <email>{{ site.email }}</email>
  </author>
  
  {{ content }}
