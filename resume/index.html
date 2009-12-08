@@ -10,8 +10,12 @@
         font-size: 11pt;
         width: 620px;
       }
-      h1, h2 {
+      a#name, h2 {
         font-family: Calibri, sans-serif;
+      }
+      a#name {
+        font-size: 22pt;
+        font-weight: bold;
       }
       a {
         color: black;
@@ -21,18 +25,19 @@
         margin: 30px auto;
         text-align: center;
       }
-      h2 {
-        margin: 18px auto;
-        text-align: center;
+      #contact {
+        position: relative;
       }
-      h2 {
-        margin-bottom: 5px;
-      }
-      #contact h1, #contact p {
+      #email, #phone {
         display: inline;
+        position: absolute;
+        top: 0px;
       }
-      #contact h1, #email {
-        margin-right: 100px;
+      #email {
+        left: 0px;
+      }
+      #phone {
+        right: 0px;
       }
       #clicktocall {
         display: none;
@@ -44,6 +49,11 @@
         font-size: 13pt;
         font-style: italic;
         margin: 10px auto;
+      }
+      h2 {
+        margin: 18px auto;
+        text-align: center;
+        margin-bottom: 5px;
       }
       #skills, #contributions {
         width: 300px;
@@ -70,7 +80,7 @@
       #experience, .job ul, .school ul {
         clear: both;
       }
-      .job p, .school p {
+      #address p, .job p, .school p {
         margin: 0;
       }
       .job div, .school div {
@@ -95,8 +105,8 @@
   </head>
   <body>
     <div id="contact">
+      <a id="name" href="http://matschaffer.com">Mat Schaffer</a>
       <p id="email"><a href="mailto:mat@schaffer.me">mat@schaffer.me</a></p>
-      <h1><a href="http://matschaffer.com">Mat Schaffer</a></h1>
       <p id="phone">215.501.7805</p>
       <div id="clicktocall">
         <object type="application/x-shockwave-flash"
