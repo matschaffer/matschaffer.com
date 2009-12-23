@@ -16,7 +16,7 @@ RewriteRule ^home / [R=301,L]
 RewriteRule ^about / [R,L]
 RewriteRule ^weddingphotos http://www.flickr.com/photos/schapht/sets/72157602893305806/ [R,L]
 RewriteRule ^pictures http://www.flickr.com/photos/schapht/ [R,L]
-RewriteRule ^jppictures/Trip http://www.flickr.com/photos/schapht/sets/72157604772199320/ [R,L]
+RewriteRule ^jppictures/Tri http://www.flickr.com/photos/schapht/sets/72157604772199320/ [R,L]
 RewriteRule ^jppictures/takayama http://www.flickr.com/photos/schapht/sets/72157604770766829/ [R,L]
 
 # Files
