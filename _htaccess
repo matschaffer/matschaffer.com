@@ -18,6 +18,7 @@ RewriteRule ^weddingphotos http://www.flickr.com/photos/schapht/sets/72157602893
 RewriteRule ^pictures http://www.flickr.com/photos/schapht/ [R,L]
 RewriteRule ^jppictures/Tri http://www.flickr.com/photos/schapht/sets/72157604772199320/ [R,L]
 RewriteRule ^jppictures/takayama http://www.flickr.com/photos/schapht/sets/72157604770766829/ [R,L]
+RewriteRule ^files/NOK5300.tiff http://erka.kpumuk.info/mac-os-x/isync-and-nokia-5300/ [R,L]
 
 # Files
 RewriteRule files/DigitalWorldClock http://cloud.github.com/downloads/matschaffer/digital-world-clock/DigitalWorldClock-1.5.2.zip [R=301,L]
