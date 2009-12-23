@@ -5,13 +5,10 @@
     <title>Mat Schaffer</title>
     <style type="text/css">
       body {
-        font-family: Palatino, serif;
+        font-family: Calibri, sans-serif;
         margin: 30px;
         font-size: 11pt;
         width: 620px;
-      }
-      a#name, h2 {
-        font-family: Calibri, sans-serif;
       }
       a#name {
         font-size: 22pt;
@@ -29,7 +26,6 @@
         position: relative;
       }
       #email, #phone {
-        display: inline;
         position: absolute;
         top: 0px;
       }
@@ -55,14 +51,39 @@
         text-align: center;
         margin-bottom: 5px;
       }
-      #skills, #contributions {
-        width: 300px;
+      #skills {
+        width: 200px;
+      }
+      #contributions {
+        width: 370px;
+      }
+      dt {
+        float: left;
+        width: 6em;
+/*        font-weight: bold;*/
+      }
+      dd:before {
+        color: #aaa;
+        content: "– ";
+      }
+      dd {
+        margin-left: 6em;
       }
       #skills, .info {
         float: left;
       }
       #contributions, .location {
         float: right;
+      }
+      #skills ul, #contributions dl {
+        margin-top: 1em;
+      }
+      #skills ul {
+        line-height: 25px;
+        text-align: justify;
+      }
+      #skills li {
+        padding-right: 10px;
       }
       .compact {
         margin: 0;
@@ -72,10 +93,19 @@
       .compact li {
         display: inline;
       }
-      .compact li:not(:last-child):after {
+      .compact li:after {
         color: #777;
         font-size: 11pt;
+      }
+      .ellipsis li:after {
         content: " ⋯ ";
+      }
+      .comma li:after {
+        color: #000;
+        content: ", ";
+      }
+      .compact li:last-child:after {
+        content: "";
       }
       #experience, .job ul, .school ul {
         clear: both;
@@ -91,14 +121,8 @@
         text-align: right;
       }
     </style>
-    <style type="text/css" media="screen">
-      a {
-        text-shadow: 2px 2px 2px #ccc;
-      }
-    </style>
     <!--[if IE]>
       <style type="text/css">
-        a { text-decoration: underline; }
         .compact li { padding-right: 15px; }
       </style>
     <![endif]-->
@@ -119,26 +143,25 @@
     </div>
 
     <div id="objective">
-      I write beautiful code to solve ugly problems.
+      I'm a full-stack web developer with a strong knowledge of web standards and RESTful scaling techniques.
     </div>
 
     <div id="skills">
       <h2>Tools</h2>
       <ul class="compact">
-        <li>Ruby on Rails</li>
-        <li>Amazon Web Services</li>
+        <li>Ruby&nbsp;on&nbsp;Rails</li>
+        <li>AWS</li>
         <li>MySQL</li>
         <li>Hadoop</li>
         <li>Python</li>
-        <li>PHP</li>
         <li>Java</li>
         <li>Spring</li>
         <li>SOAP</li>
         <li>REST</li>
         <li>Bash</li>
         <li>Apache</li>
-        <li>Subversion</li>
         <li>Git</li>
+        <li>Subversion</li>
         <li>Ubuntu</li>
         <li>RedHat</li>
         <li>Solaris</li>
@@ -146,35 +169,55 @@
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
-        <li>BDD</li>
+        <li>TDD/BDD</li>
         <li>Scrum/XP</li>
       </ul>
     </div>
 
-    <div id="contributions" class="compact">
+    <div id="contributions">
       <h2>Contributions</h2>
-      <ul class="compact">
-        <li>Gruff</li>
-        <li>Scruffy</li>
-        <li>Rcov</li>
+      <dl>
+        <dt>Gruff</dt><dd>added multi-line graph legends</dd>
+        <dt>Rcov</dt><dd>corrected cross-browser bug in HTML report</dd>
+        <dt>Redcar</dt><dd>ported code highlighter from Gtk to Java</dd>
+        <dt>Scruffy</dt><dd>added support for scatter plots</dd>
+        <dt>Mechanize</dt><dd>improved API for multipart file uploads</dd>
+        <dt>Philly.rb</dt><dd>organize regular meetings and Pub Nites</dd>
+      </dl>
+      <ul class="compact comma">
         <li>ReviewBoard</li>
-        <li>Redcar</li>
         <li>Ruby Facets</li>
         <li>Maven</li>
-        <li>Mechanize</li>
-        <li>ScrewUnit</li>
         <li>Apache Buildr</li>
-        <li>Philly.rb</li>
+        <li>Screw Unit</li>
       </ul>
-      <p>Samples online at <a href="http://github.com/matschaffer">github.com/matschaffer</a>.</p>
+      </p>
+      <p>Samples available online at <a href="http://github.com/matschaffer">github.com/matschaffer</a>.</p>
     </div>
 
     <div id="experience">
       <h2>Experience</h2>
       <div class="job">
         <div class="info">
-          <p>April 2007 – Present</p>
+          <p>February 2009 – Present</p>
           <p>Senior Software Engineer</p>
+        </div>
+        <div class="location">
+          <p>Comcast Interactive Media</p>
+          <p>Philadelphia, PA</p>
+        </div>
+        <ul>
+          <li>Delivered features and products for comcast.net including MyDVR</li>
+          <li>Built processes for version control and releases for a team of 30 developers</li>
+          <li>Lead small developer teams as a Scrum master</li>
+          <li>Implemented new web applications and technology prototypes</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="info">
+          <p>April 2007 – February 2009</p>
+          <p>Software Engineer</p>
         </div>
         <div class="location">
           <p>Comcast Interactive Media</p>
@@ -261,7 +304,7 @@
           <p>Drexel University</p>
           <p>Philadelphia, PA</p>
         </div>
-        <ul class="compact">
+        <ul class="compact ellipsis">
           <li>CS Honorable Mention</li>
           <li>Honors Program</li>
           <li>Dean’s List</li>
