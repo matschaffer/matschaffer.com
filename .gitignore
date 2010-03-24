@@ -1,4 +1,5 @@
 .DS_Store
+*.swp
 _import
 _site
 _jekyll
