@@ -157,6 +157,8 @@ a.home {
   background: white;
   padding: 3px;
   margin: 0 17px 17px 0;
+  height: 75px;
+  width: 75px;
 }
 
 #flickr .flickr_badge_image img {
