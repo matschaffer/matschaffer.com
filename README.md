@@ -1,3 +1,13 @@
+The source for Mat Schaffer's blog
+==================================
+
+Post ideas
+----------
+
+* Things I love about Bundler
+
+Credits
+-------
 The source for the new jekyll-based hotness that is http://matschaffer.com.
 
 Thanks to Claudio Perez Gamayo (80kv.com) and Tate Johnson (tatey.com) for making their sites available on github for me to learn from!
