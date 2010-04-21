@@ -13,13 +13,6 @@ body {
   background: #4C4C4C;
 }
 
-.sash {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 0;
-}
-
 h1, h2, h3, a.h2, a.home {
   font-family: Helvetica, sans-serif;
   letter-spacing: 1px;
