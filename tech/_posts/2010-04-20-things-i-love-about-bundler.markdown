@@ -3,7 +3,7 @@ layout: post
 title: Things I Love About Bundler
 ---
 
-So I've been working with working with [Rails 3](http://guides.rails.info/3_0_release_notes.html "Ruby on Rails Guides: Ruby on Rails 3.0 Release Notes") and [bundler](http://github.com/wycats/bundler "wycats's bundler at master - GitHub") full time for a month and a half now and it's going swimmingly.
+So I've been working with working with [Rails 3](http://guides.rails.info/3_0_release_notes.html "Ruby on Rails Guides: Ruby on Rails 3.0 Release Notes") and [bundler](http://github.com/carlhuda/bundler "carlhudas's bundler at master - GitHub") full time for a month and a half now and it's going swimmingly.
 
 Here are some things that bundler does that I think are awesome.
 
