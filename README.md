@@ -4,6 +4,8 @@ The source for Mat Schaffer's blog
 Post ideas
 ----------
 
+* JavaScript testing revisited
+
 Credits
 -------
 The source for the new jekyll-based hotness that is http://matschaffer.com.
