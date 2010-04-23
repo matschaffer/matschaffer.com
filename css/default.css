@@ -47,6 +47,7 @@ a.h2, a.home, #twitter_update_list a {
   padding: 0 20px;
   background: #333;
   margin-top: 15px;
+  border-left: 2px solid #aaa;
 }
 
 #side {
@@ -76,12 +77,21 @@ a.h2, a.home, #twitter_update_list a {
   width: 100px;
 }
 
+#posts h2 {
+  font-size: 14pt;
+}
+
 .post h1 {
   margin-bottom: 5px;
 }
 
 .post p {
   line-height: 150%;
+  padding-left: 10px;
+}
+
+.post div {
+  margin: 0 10px;
 }
 
 .post img.left {
