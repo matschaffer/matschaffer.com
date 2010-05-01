@@ -26,7 +26,7 @@ You can even check that they got called with the right values:
 {% highlight javascript %}
 expect($.height.__calls[0].arguments).to(eql, [250]);
 // or 
-expect($.height.__lastCall.arguments).to(eql, [250]);  
+expect($.height.__calls.last.arguments).to(eql, [250]);  
 {% endhighlight %}
 
 And specifying return values is only slightly more complicated. Say you want to return mock html for different DOM elements:
@@ -40,11 +40,11 @@ Mock it out like this:
 
 {% highlight javascript %}
 $ = recorderMock("html");
-$.html.__return = function() {
-  var selector = $.__lastCall.arguments[0];
+$.html.__process(function(call) {
+  var selector = call.previous.arguments[0];
   return { "#start-date": "January 1st, 2010",
            "#end-date":   "January 31st, 2010" }[selector];
-};
+});
 {% endhighlight %}
 
 Need a basic mock of Raphael? Just use this:
@@ -58,3 +58,7 @@ Raphael = recorderMock("path", "rect", "text", "attr", "init", "push", "set",
 So there you have it. You can indeed test browser-related code outside a browser. And it's pretty easy.
 
 [recorderMock](http://github.com/matschaffer/recorderMock.js "matschaffer's recorderMock.js at master - GitHub") has a handful of other tricks, and I'll probably be adding more soon, so keep an eye on [the specs](http://github.com/matschaffer/recorderMock.js/blob/master/spec/unit/spec.recorderMock.js "spec/unit/spec.recorderMock.js at master from matschaffer's recorderMock.js - GitHub") for examples on how to use it more fully.
+
+_Update 2010-04-30:_
+
+I just released version 0.2.0 which includes better support for inspecting the call chain. The above examples have been updated to reflect the API changes and enhancements.
