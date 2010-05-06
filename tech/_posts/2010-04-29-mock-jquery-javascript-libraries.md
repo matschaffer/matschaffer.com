@@ -40,7 +40,7 @@ Mock it out like this:
 
 {% highlight javascript %}
 $ = recorderMock("html");
-$.html.__process(function(call) {
+$.html.__returns(function(call) {
   var selector = call.previous.arguments[0];
   return { "#start-date": "January 1st, 2010",
            "#end-date":   "January 31st, 2010" }[selector];
@@ -59,6 +59,6 @@ So there you have it. You can indeed test browser-related code outside a browser
 
 [recorderMock](http://github.com/matschaffer/recorderMock.js "matschaffer's recorderMock.js at master - GitHub") has a handful of other tricks, and I'll probably be adding more soon, so keep an eye on [the specs](http://github.com/matschaffer/recorderMock.js/blob/master/spec/unit/spec.recorderMock.js "spec/unit/spec.recorderMock.js at master from matschaffer's recorderMock.js - GitHub") for examples on how to use it more fully.
 
-_Update 2010-04-30:_
+_Update 2010-05-06:_
 
-I just released version 0.2.0 which includes better support for inspecting the call chain. The above examples have been updated to reflect the API changes and enhancements.
+I just released version 0.3.0 which includes better support for inspecting the call chain. The above examples have been updated to reflect the API changes and enhancements.
