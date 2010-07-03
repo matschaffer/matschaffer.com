@@ -84,10 +84,13 @@ a.h2, a.home, #twitter_update_list a {
   line-height: 150%;
 }
 
-.post img.left {
-  display: block;
+.left {
   float: left;
   margin: 20px 20px 20px 0;
+}
+
+.post img.left {
+  display: block;
 }
 
 .post img.center {
@@ -95,10 +98,13 @@ a.h2, a.home, #twitter_update_list a {
   margin: 0 auto 20px auto;
 }
 
-.post img.right {
-  display: block;
+.right {
   float: right;
   margin: 20px 0 20px 20px;
+}
+
+.post img.right {
+  display: block;
 }
 
 .post .footer {
