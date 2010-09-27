@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Docs with Markdown, Jekyll and Prawn
+title: Docs with Maruku, Jekyll and Prawn
 ---
 
 If you've been reading my blog at all you've probably noticed that I am not a lawyer. Sadly when [starting your own business](http://mashion.net), there are legal documents involved.
 
 Now I don't know about you, but doing find and replace on my agreements for every new client sounded tedious and not fun. So I'm working on a way to make it more programmer-ish. Basically I'm taking the [Jekyll](http://jekyllrb.com/) approach to legal documentation. Markdown with a YAML header goes in, custom-tailored and nicely formatted PDF comes out.
 
-And with just under 130 lines of ruby, I was able to turn this:
+With just under 130 lines of ruby and some help from [Maruku](http://maruku.rubyforge.org/), [Jekyll](http://jekyllrb.com/) and [Prawn](http://prawn.majesticseacreature.com/), I was able to turn this:
 
 {% assign consultant = '{{ consultant }}' %}
 {% assign client     = '{{ client }}' %}
@@ -37,4 +37,4 @@ Into this:
 
 Neat, right?
 
-I'll definitely be releasing the code properly sometime soon. But in the mean time, here's a [gist](http://gist.github.com/598566) to whet your appetite. If you have any ideas, or if you're a lawyer who might want in on this hotness, feel free to [get in touch](mailto:mat@schaffer.me). Thanks!
+I'll definitely be releasing the code properly sometime soon. But in the mean time, [here's a gist](http://gist.github.com/598566) to whet your appetite. If you have any ideas, or if you're a lawyer who might want in on this hotness, please do [get in touch](mailto:mat@schaffer.me). Thanks!
