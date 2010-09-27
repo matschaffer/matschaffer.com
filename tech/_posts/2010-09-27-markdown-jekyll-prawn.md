@@ -33,7 +33,7 @@ referred to individually as a “**Party**,” or collectively as the
 
 Into this:
 
-<img src="http://img.skitch.com/20100927-numqttjuxejbigwhjqscddjif9.jpg" />
+<img src="http://img.skitch.com/20100927-dq43axfs5k75s64dk8ryjbn73x.jpg" />
 
 Neat, right?
 
