@@ -1,0 +1,11 @@
+#N canvas 0 22 158 178 10;
+#X obj 35 124 dac~;
+#X obj 46 22 notein;
+#X obj 46 53 mtof;
+#X obj 46 85 osc~;
+#X obj 111 86 print;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 3 0 0 1;
