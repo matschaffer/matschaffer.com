@@ -5,9 +5,9 @@ def jekyll(opts = nil)
   cp "_htaccess", "_site/.htaccess"
 end
 
-desc "Start in --auto mode"
+desc "Start in --auto dev mode"
 task :auto do
-  jekyll "--auto"
+  jekyll ["--auto", "--url", "http://dev.matschaffer.com"]
 end
 
 desc "Start in --auto --server mode"
