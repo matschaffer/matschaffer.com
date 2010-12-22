@@ -1,5 +1,6 @@
-.highlight, p code { font-family: Monaco, Consolas, Courier, monospace; font-size: 10pt;
-                     background: #fff; color: #000; border: 1px solid gray; padding: 1px; }
+.highlight, p code { font-family: Monaco, Consolas, Courier, monospace; font-size: 10pt; }
+.highlight { background: #fff; color: #000; border: 1px solid gray; padding: 1px; }
+p code { background: #3e3e3e; padding: 0 3px; }
 .highlight { overflow: auto; padding: 5px; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
