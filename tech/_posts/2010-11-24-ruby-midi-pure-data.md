@@ -82,3 +82,5 @@ end
 {% endhighlight %}
 
 Which sounds [like this]({{ site.url }}/files/zelda.mp3). Maybe I'll make something closer to real music with this some day. But for now it's a lot of fun. Hope you think so too.
+
+**UPDATE**: The latest version of collavoce has a much nicer syntax for defining voices. Be sure to check out [this example](https://github.com/matschaffer/collavoce/blob/master/examples/zelda.rb) for the latest rendition.
