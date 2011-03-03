@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Place holders
+RewriteRule ^lqr$ / [R,L]
+
 # Posts
 RewriteRule ^(tech|life)/(.*)$ /$2 [R,L]
 
