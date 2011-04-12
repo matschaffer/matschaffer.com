@@ -9,7 +9,7 @@ Before we get into it you should know that finding a good developer in any techn
 
 ## 1. Get involved
 
-There are probably some User Groups near your area. Maybe even a Ruby User Group. Google them, go to a meeting. This is easier when you know a little programming, since the conversation will be mostly technical. If you have even one developer now, send them. If you're the only person in your company, just show up anyway. Establishing a presence in the community goes a long way. The more often people see you, the more likely your company will come to mind when people think about changing jobs.
+There are probably some user groups near your area. Maybe even a Ruby user group. Google them, go to a meeting. This is easier when you know a little programming, since the conversation will be mostly technical. If you have even one developer now, send them. If you're the only person in your company, just show up anyway. Establishing a presence in the community goes a long way. The more often people see you, the more likely your company will come to mind when people think about changing jobs.
 
 ## 2. Be a Presenter or a Sponsor
 
