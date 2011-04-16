@@ -12,8 +12,9 @@ To use this script you'll need:
 Then run this:
 
 {% highlight bash %}
-curl -L https://github.com/matschaffer/vcap/tarball/vbox-install | tar xf -
-./matschaffer-vcap-*/setup/vbox_install
+curl -O https://github.com/matschaffer/vcap/raw/vbox-install/setup/vbox_install
+curl -O https://github.com/matschaffer/vcap/raw/vbox-install/setup/install
+sh vbox_install
 {% endhighlight %}
 
 Accept the host key (should be 5f:f4:1f:14:4c:b8:5c:ad:11:b1:85:f3:f1:0d:a5:2c) and enter the password "ubuntu" once.
