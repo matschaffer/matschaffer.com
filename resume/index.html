@@ -100,10 +100,10 @@
       .compact li:last-child:after {
         content: "";
       }
-      #experience, .job ul, .school ul {
+      #experience, #education, .job ul, .school ul, .presentation {
         clear: both;
       }
-      #address p, .job p, .school p {
+      #address p, .info p, .location p, .school p {
         margin: 0;
       }
       .job.old {
@@ -121,9 +121,22 @@
       .job li:before {
         content: "– ";
       }
+      .info {
+        width: 250px;
+      }
       .location {
         width: 320px;
         text-align: right;
+      }
+      #teaching .info {
+        width: 120px;
+      }
+      #teaching .location {
+        float: none;
+        width: 150px;
+      }
+      #teaching .location, #teaching .location p {
+        float: left;
       }
     </style>
   </head>
@@ -138,58 +151,57 @@
       A full-stack web developer with an eye for beautiful code, a passion for testing and a strong knowledge of RESTful scaling techniques.
     </div>
 
-    <div id="skills">
-      <h2>Tools</h2>
-      <ul class="compact">
-        <li>Ruby on Rails</li>
-        <li>AWS</li>
-        <li>MySQL</li>
-        <li>Hadoop</li>
-        <li>Ruby</li>
-        <li>Python</li>
-        <li>Java</li>
-        <li>Spring</li>
-        <li>REST</li>
-        <li>SOAP</li>
-        <li>Bash</li>
-        <li>Apache</li>
-        <li>Git</li>
-        <li>Subversion</li>
-        <li>RedHat</li>
-        <li>Ubuntu</li>
-        <li>Solaris</li>
-        <li>XML</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>TDD/BDD</li>
-        <li>Scrum/XP</li>
-      </ul>
-    </div>
-
-    <div id="contributions">
-      <h2>Contributions</h2>
-      <dl>
-        <dt>Redcar</dt><dd>ported code highlighter from Gtk to Java</dd>
-        <dt>Gruff</dt><dd>added multi-line graph legends</dd>
-        <dt>Rcov</dt><dd>corrected cross-browser bug in reports</dd>
-        <dt>Scruffy</dt><dd>added support for scatter plots</dd>
-        <dt>Mechanize</dt><dd>improved API for multipart file uploads</dd>
-        <dt>Philly.rb</dt><dd>organize regular meetings and Pub Nites</dd>
-      </dl>
-      <ul class="compact comma">
-        <li>ReviewBoard</li>
-        <li>Ruby Facets</li>
-        <li>Maven</li>
-        <li>Apache Buildr</li>
-        <li>Screw Unit</li>
-      </ul>
-      </p>
-      <p>Samples available online at <a href="http://github.com/matschaffer">github.com/matschaffer</a>.</p>
+    <div id="teaching">
+      <h2>Speaking Experience</h2>
+      <div class="presentation">
+        <div class="info">
+          <p>October 2011</p>
+        </div>
+        <div class="location">
+          <p>PANMA</p>
+        </div>
+        <p>Presentation on Philly.rb and local developer communities</p>
+      </div>
+      <div class="presentation">
+        <div class="info">
+          <p>July 2011</p>
+        </div>
+        <div class="location">
+          <p>Wharton Web Conf</p>
+        </div>
+        <p>Overview of Web development with Rails</p>
+      </div>
+      <div class="presentation">
+        <div class="info">
+          <p>April 2011</p>
+        </div>
+        <div class="location">
+          <p>Ruby Nation</p>
+        </div>
+        <p>Integrating Twilio's telephony service with Ruby Web apps</p>
+      </div>
+      <div class="presentation">
+        <div class="info">
+          <p>April 2011</p>
+        </div>
+        <div class="location">
+          <p>Philly Tech Week</p>
+        </div>
+        <p>Web development with Rails workshop</p>
+      </div>
+      <div class="presentation">
+        <div class="info">
+          <p>November 2010</p>
+        </div>
+        <div class="location">
+          <p>UPenn on Rails</p>
+        </div>
+        <p>Student-organized series on web development with Rails</p>
+      </div>
     </div>
 
     <div id="experience">
-      <h2>Experience</h2>
+      <h2>Work Experience</h2>
 
       <div class="job">
         <div class="info">
@@ -206,7 +218,6 @@
           <li>Improved process at multiple area startups and agencies by implementing Agile practices such as a linear backlog, testing and pair programming</li>
           <li>Managed customer pipeline and invoicing with Highrise and Freckle</li>
           <li>Coordinated marketing and advertising including Google AdWords and guest seminars at the University of Pennsylvania</li>
-
         </ul>
       </div>
 
@@ -294,7 +305,7 @@
           <li>Administered a test lab environment consisting of mixed Unix servers and cable networking equipment from Cisco and Motorola</li>
         </ul>
       </div>
-      <div class="job old">
+      <div class="job">
         <div class="info">
           <p>June 2004 - July 2005</p>
           <p>English Teacher</p>
@@ -360,6 +371,55 @@
         </ul>
         <p>Senior project: SwingPix, a photo management tool similar to iPhoto
       </div>
+    </div>
+
+    <div id="skills">
+      <h2>Tools</h2>
+      <ul class="compact">
+        <li>Ruby on Rails</li>
+        <li>AWS</li>
+        <li>MySQL</li>
+        <li>Hadoop</li>
+        <li>Ruby</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>Spring</li>
+        <li>REST</li>
+        <li>Bash</li>
+        <li>Apache</li>
+        <li>Git</li>
+        <li>Subversion</li>
+        <li>DevOps</li>
+        <li>RedHat</li>
+        <li>Ubuntu</li>
+        <li>Solaris</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>TDD/BDD</li>
+        <li>Agile</li>
+      </ul>
+    </div>
+
+    <div id="contributions">
+      <h2>Contributions</h2>
+      <dl>
+        <dt>Redcar</dt><dd>ported code highlighter from Gtk to Java</dd>
+        <dt>Gruff</dt><dd>added multi-line graph legends</dd>
+        <dt>Rcov</dt><dd>corrected cross-browser bug in reports</dd>
+        <dt>Scruffy</dt><dd>added support for scatter plots</dd>
+        <dt>Mechanize</dt><dd>improved API for multipart file uploads</dd>
+        <dt>Philly.rb</dt><dd>organize regular meetings and Pub Nites</dd>
+      </dl>
+      <ul class="compact comma">
+        <li>ReviewBoard</li>
+        <li>Ruby Facets</li>
+        <li>Maven</li>
+        <li>Apache Buildr</li>
+        <li>Screw Unit</li>
+      </ul>
+      </p>
+      <p>Samples available online at <a href="http://github.com/matschaffer">github.com/matschaffer</a>.</p>
     </div>
   </body>
 </html>
