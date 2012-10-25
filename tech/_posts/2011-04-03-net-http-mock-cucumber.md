@@ -7,7 +7,7 @@ I just finished up an awesome week by speaking at [RubyNation](http://www.rubyna
 
 If you're trying to use any sort of global Net::HTTP mocking tool during your Cucumber tests, you might encounter something like this:
 
-{% highlight text %}
+{% highlight gherkin %}
   Background:
     Given I am on the new user registration page
       Capybara::TimeoutError (Capybara::TimeoutError)
