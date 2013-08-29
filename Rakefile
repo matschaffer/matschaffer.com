@@ -1,40 +1,29 @@
+require 'yaml'
+
 def jekyll(opts = nil)
-  sh "rm -rf _site"
   jekyll = Dir["_jekyll/bin/jekyll"].first || "jekyll"
   sh [jekyll, opts].join(" ")
+end
+
+desc "Clean the built site"
+task :clean do
+  sh "rm -rf _site"
+end
+
+desc "Run Jekyll in server mode"
+task :serve do
+  jekyll "serve -w"
+end
+
+desc "Run a build of jekyll"
+task :build do
+  jekyll
   cp "_htaccess", "_site/.htaccess"
 end
 
-desc "Start in --auto dev mode"
-task :auto do
-  jekyll ["--auto", "--url", "http://dev.matschaffer.com"]
-end
-
-desc "Start in --auto --server mode"
-task :server do
-  jekyll "--auto --server"
-end
-
-desc "Run a build of jekyll "
-task :build do
-  jekyll
+desc "Deploy to deploy_path specified in config.yml"
+task :deploy => :build do
+  sh "rsync -rtz --delete _site/ " + YAML.load_file("_config.yml")['deploy_path']
 end
 
 task :default => :auto
-task :deploy => "deploy:dreamhost"
-
-namespace :deploy do
-  desc "Deploy to Dreamhost"
-  task :dreamhost => :build do
-    rsync "penguin.dreamhost.com:~/sites/matschaffer.com/jekyll"
-  end
-
-  desc "Deploy locally"
-  task :local => :build do
-    rsync "localhost:~/Sites/jekyll"
-  end
-
-  def rsync(destination)
-    sh "rsync -rtz --delete _site/ #{destination}"
-  end
-end
