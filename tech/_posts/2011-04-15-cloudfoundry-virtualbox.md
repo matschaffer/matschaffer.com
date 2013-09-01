@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Running CloudFoundry with VirtualBox on OS X
+abstract: Here's how you can run your own CloudFoundry system within VirtualBox. Batteries included!
 ---
 
 So you might have seen the ["one click" installer](http://www.trottercashion.com/2011/04/14/automating-the-cloudfoundry-install.html) for CloudFoundry that my esteemed colleague Trotter Cashion posted yesterday. This is very cool. If you have an Ubuntu server handy you can run that script and you have a cloud. But I like to keep things local so I started working to get it installed on VirtualBox. And here's the solution, packaged as a script.

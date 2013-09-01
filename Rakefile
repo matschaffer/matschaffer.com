@@ -26,4 +26,4 @@ task :deploy => :build do
   sh "rsync -rtz --delete _site/ " + YAML.load_file("_config.yml")['deploy_path']
 end
 
-task :default => :auto
+task :default => :serve

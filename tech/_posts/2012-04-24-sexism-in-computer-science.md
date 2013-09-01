@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A paragraph on sexism in computer science
+abstract: Sexism is a problem in computer science. Pass it on.
 ---
 
 [Trevor](http://trevmex.com/post/21644536045/a-paragraph-on-sexism-in-computer-science) encouraged me to write a paragraph on sexism in computer science and how we can change it. I encourage you to do the same!

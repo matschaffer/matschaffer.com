@@ -2,10 +2,7 @@
 layout: default
 ---
 
-<div id="posts" class="archive">
 {% for post in site.posts %}
-  <div class="post">
-    <span>{{ post.date | date_to_string }}</span> &mdash; <a class="h2" href="{{ post.url }}">{{ post.title | xml_escape }}</a>
-  </div>
+<a class="h2" href="{{ post.url }}">{{ post.title | xml_escape }}</a>
+<span>{{ post.date | date_to_string }}</span>
 {% endfor %}
-</div>

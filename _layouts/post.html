@@ -1,17 +1,20 @@
 ---
 layout: default
-css:
-  - http://disqus.com/stylesheets/matschaffer/disqus.css?v=2.0
-js:
-  - http://disqus.com/forums/matschaffer/embed.js
 ---
 
-<div id="posts">
-  <div class="post">
-    <h1>{{ page.title | xml_escape }}</h1>
-    <a href="/" class="home">← back to matschaffer.com</a>
-    {{ content }}
-  </div>
-</div>
+<h1>{{ page.title | xml_escape }}</h1>
 
-<div id="disqus_thread"><noscript><a href="http://disqus.com/forums/matschaffer/?url=ref">View the discussion thread.</a></noscript></div>
+{{ content }}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//matschaffer.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  <em>Sorry, but comments are powered by Disqus which requires JavaScript. Feel free to <a href="mailto:mat@schaffer.me">email me</a> any thoughts you may have.
+</noscript>

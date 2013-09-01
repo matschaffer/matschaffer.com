@@ -1,59 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script src="//cdn.optimizely.com/js/18775964.js"></script>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>{{ page.title }}</title>
-    <link rel="openid.server" href="http://openid.claimid.com/server" />
-    <link rel="openid.delegate" href="http://openid.claimid.com/schapht" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/bootstrap.readable.min.css">
+    <link rel="stylesheet" href="/app/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/application.css">
+    <link rel="stylesheet" href="/css/syntax.css">
 
-    <link rel="alternate" type="application/atom+xml" title="All Posts" href="http://feeds.feedburner.com/MatSchaffer" />
-    <link rel="alternate" type="application/atom+xml" title="Tech Posts Only" href="http://feeds.feedburner.com/MatSchafferTechnology" />
-
-    <link rel="stylesheet" href="/css/default.css" type="text/css" />
-    <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
-    {% for css in page.css %}
-      <link rel="stylesheet" href="{{ css }}" type="text/css" />
-    {% endfor %}
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/app/bower_components/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="/app/bower_components/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+    {% include analytics.html %}
+    {% include feeds.html %}
+    {% include openid.html %}
+    {% include favicons.html %}
   </head>
   <body>
-    <div id="wrap">
-      <div id="main">
-        {{ content }}
-      </div>
-      <div id="side">
-        <div id="speaking">
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Mat Schaffer's Blog</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
-        <div id="flickr">
-          <div id="photos">
-            <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=49154856%40N00"></script>
-            <div class="clear"></div>
-          </div>
-        </div>
-        <div id="about">
-          <a class="h2" href="mailto:{{ site.email }}">{{ site.email }}</a>
-          <p>I live and <a href="http://github.com/matschaffer">code</a> in Philadelphia, Pennsylvania. I also run <a href="http://mashion.net/" title="Mashion: Rails Help and Rescue">Mashion</a>, my own consulting company. I travel and take pictures when I can and also have family in Japan.</p>
-          <p>マイホームページへよこそう！フィラデルフィアで働くウェブのプログラマです。旅行へ行って写真をとることがすきです。</p>
-        </div>
-        <div id="twitter">
-          <a class="h2" href="http://twitter.com/matschaffer" rel="me">twitter.com/matschaffer</a>
-          <ul id="twitter_update_list"><li class="loading">Loading tweets...</li></ul>
-        </div>
-        <div id="archive">
-          <a class="h2" href="/posts.html">all posts</a>
-        </div>
-        <div id="banners">
-          <a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp' title='JavaScript RegExp Example: Using a regular expression to change data format'><img src='http://static.jsconf.us/promotejsv.gif' height='280' width='160' alt='JavaScript RegExp Example: Using a regular expression to change data format'/></a>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li><a href="http://about.me/matschaffer">About Me</a></li>
+            <li><a href="/posts.html">Archives</a></li>
+          </ul>
         </div>
       </div>
     </div>
 
-    {% include jsapi.html %}
-    {% include twitter.html %}
-    {% include disqus.html %}
-    {% include analytics.html %}
-    {% for js in page.js %}
-      <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
-    {% endfor %}
+
+    <div class="container">
+      {{ content }}
+    </div>
+
+    <script src="/app/bower_components/jquery/jquery.min.js"></script>
+    <script src="/app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/bootswatch.js"></script>
   </body>
 </html>

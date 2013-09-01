@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Run CI locally on Jenkins
+abstract: CI is cheap and easy. If you have an extra machine here's how to run Jenkins on it with minimal set up cost.
 ---
 
 At [Mashion](http://mashion.net) our usual pairing setup means we have one laptop that's not doing much work. It's handy to have for email, or breaking off to google something but it's idle most of the time.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mashion's Pairing Rig
+abstract: Want to pair program? Here's how we do it at Mashion including all of our different experiments and what you'll need to buy to set it up for yourself.
 ---
 
 Here at Mashion, we pair program a lot. We've been iterating through a handful of pairing setups and have finally settled on what I'm happy to call a masterpiece. But first, a little bit about how we got there.
@@ -9,11 +10,11 @@ We decided that having a dedicated pairing machine wasn't practical, partly for 
 
 Originally, we paired side-by-side using a shared single monitor. This worked reasonably well. It's simple to get started and offers a balanced environment between the two partners. But being off to the side of the monitor is bad ergonomics and having a face-to-face conversation doesn't work very well. Noticing that your partner is trying to type is also harder and you bump chairs a lot more often than you'd think because both partners tend to lean toward the shared display.
 
-<img class="center" src="http://f.cl.ly/items/3j340r0p0R1t3T1R2a06/IMG_9963.jpg" alt="Side-to-side pairing has some issues but is simple" />
+![Side-to-side pairing has some issues but is simple](http://f.cl.ly/items/3j340r0p0R1t3T1R2a06/IMG_9963.jpg)
 
 Then we switched to face-to-face pairing on a single desk. This worked better, but since we still only used one display, one coder would be on their laptop. This mismatch was awkward and again not great ergonomics. In exchange, we got good face-to-face discussion, easier non-verbal cues and no chair bumping. Although we did get occasional [games of footsie](http://www.flickr.com/photos/schapht/7640998898/in/set-72157630737977714). If you're setting up pair programming with limited time or resources, I'd definitely go this route first. The desk here is an [Ikea Galant](http://www.ikea.com/us/en/catalog/products/S29806818/#/S19852113), which I've seen at a number of offices in the past couple years.
 
-<img class="center" src="http://f.cl.ly/items/3y0c1y1k3M04332f3b00/IMG_9970.jpg" alt="Simple face to face pairing is much better." />
+![Simple face to face pairing is much better.](http://f.cl.ly/items/3y0c1y1k3M04332f3b00/IMG_9970.jpg)
 
 At this point we really wanted to address the environment parity problem. We wanted two monitors, but how could we mirror two displays off of one MacBook? Most solutions to this were expensive and bulky. Thankfully [Jason Garber](http://jasongarber.com/) joined the team around this time and had a stroke of genius: Use HDMI splitters which were small, cheap and easy to attach to a laptop. This was the key that let us drive two identical environments off of one standard laptop.
 
@@ -21,7 +22,8 @@ To really put the icing on the cake, we took a cue from Pivotal Labs' [tete-a-te
 
 Finally we finished it off with easily-movable monitor mounts, wireless input devices and some cable clips to make a pairing rig that's there when you need it and gets out of the way when you don't.
 
-<img class="center" src="http://f.cl.ly/items/0a0W2S3g3T2f1T2J2G25/IMG_9974.jpg" alt="Tete-at-tete pairing on small desks is a total win." />
+![Tete-at-tete pairing on small desks is a total win.](http://f.cl.ly/items/0a0W2S3g3T2f1T2J2G25/IMG_9974.jpg)
+
 
 This setup is by far our best setup yet. The closer seating makes for easy conversation even when the floor gets busy. Each coder gets [their own space](http://www.flickr.com/photos/schapht/7641013494/in/set-72157630737977714/) which is just big enough to get the job done. Having the monitors mounted on the outside also makes them [easy to move aside](http://www.flickr.com/photos/schapht/7641005226/in/set-72157630737977714/) when splitting off to do some research or other solo task. And we get some [epic high-five action](http://www.flickr.com/photos/schapht/7641012396/in/set-72157630737977714/) when the test suite goes green.
 

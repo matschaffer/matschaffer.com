@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Creating a minimal Ubuntu VirtualBox image
+abstract: Need to create an EC2-like local Ubuntu server?
+          This post covers what you need to do step-by-step.
 ---
 
 In my last post, I showed you how to build a CloudFoundry mini-cloud on an Ubuntu VirtualBox. Building that base image took some work and sorting through old blog posts, so I thought I'd post the instructions I ended up using.
