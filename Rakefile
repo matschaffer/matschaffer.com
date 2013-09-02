@@ -32,7 +32,8 @@ task :new do
   slug_input = ask('Slug: ')
   slug = slug_input.gsub(/\s+/, '-').downcase
   today = Time.now.strftime('%Y-%m-%d')
-  File.open("_posts/#{today}-#{slug}.md", 'w') do |post|
+  post = "_posts/#{today}-#{slug}.md"
+  File.open(post, 'w') do |post|
     post.puts <<-MD.gsub(/^\s+/, '')
       ---
       layout: post
@@ -42,6 +43,7 @@ task :new do
 
     MD
   end
+  exec "#{ENV['EDITOR']} #{post}"
 end
 
 desc "Redates the most recent post to today"
