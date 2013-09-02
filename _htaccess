@@ -11,6 +11,7 @@ RewriteCond %{QUERY_STRING} ^cat=3$
 RewriteRule ^feed/atom/$ /tech/atom.xml? [R=301,L]
 RewriteRule ^feed/atom /atom.xml [R=301,L]
 RewriteRule ^tag.*feed /atom.xml [R=301,L]
+RewriteRule ^tech/atom /atom.xml [R=301,L]
 
 # Pages
 RewriteRule ^(home/){0,1}projects http://github.com/matschaffer [R,L]
