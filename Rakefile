@@ -26,4 +26,34 @@ task :deploy => :build do
   sh "rsync -rtz --delete _site/ " + YAML.load_file("_config.yml")['deploy_path']
 end
 
+desc "Make a new post"
+task :new do
+  require 'highline/import'
+  slug_input = ask('Slug: ')
+  slug = slug_input.gsub(/\s+/, '-').downcase
+  today = Time.now.strftime('%Y-%m-%d')
+  File.open("_posts/#{today}-#{slug}.md", 'w') do |post|
+    post.puts <<-MD.gsub(/^\s+/, '')
+      ---
+      layout: post
+      title: #{slug_input}
+      abstract: #{slug}
+      ---
+
+    MD
+  end
+end
+
+desc "Redates the most recent post to today"
+task :redate do
+  require 'fileutils'
+  last = Dir["_posts/*.md"].last
+  today = Time.now.strftime('%Y-%m-%d')
+  redated = last.gsub(%r{^_posts/\d+-\d+-\d+}, "_posts/#{today}")
+  FileUtils.mv(last, redated)
+end
+
+desc "Alias for redate and deploy"
+task :publish => [:redate, :deploy]
+
 task :default => :serve
