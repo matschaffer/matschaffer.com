@@ -8,6 +8,30 @@ body {
   margin-bottom: 12px;
 }
 
-a.continue:hover {
+a.block-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.fake-link {
+  color: #428bca;
+}
+
+span.fake-link:hover {
+  text-decoration: underline;
+}
+
+blockquote.linkable:hover {
+  background: #E7EEFF;
+  border-color: #D4D0F0;
+}
+
+.about-me {
+  margin-top: 24px;
+}
+
+.brand-links a {
+  font-size: 55px;
+  line-height: 55px;
   text-decoration: none;
 }

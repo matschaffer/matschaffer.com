@@ -2,15 +2,36 @@
 layout: default
 title: Mat Schaffer's Blog
 ---
-<h2>&nbsp;</h2>
 <div class="row">
-  {% for post in site.posts limit:5 %}
-    <blockquote>
-      {{ post.abstract | xml_escape }} <a class="continue" href="{{ post.url }}"><i class="icon-circle-arrow-right"></i></a>
-      <small>
-        {{ post.date | date_to_string }}
-        <a href="{{ post.url }}">{{ post.title | xml_escape }}</a>
-      </small>
-    </blockquote>
-  {% endfor %}
+  <div class="col-lg-8">
+    <h2>Recent posts</h2>
+    {% for post in site.posts limit:5 %}
+      <a class="block-link" href="{{ post.url }}">
+        <blockquote class="linkable">{{ post.abstract | xml_escape }}
+          <small>
+            {{ post.date | date_to_string }}
+            <span class="fake-link">{{ post.title | xml_escape }}</span> <i class="fake-link icon-circle-arrow-right"></i>
+          </small>
+        </blockquote>
+      </a>
+    {% endfor %}
+  </div>
+  <div class="col-lg-4">
+    <div class="about-me thumbnail">
+      <img src="/ico/matschaffer.png" height="350" width="350" />
+      <div class="caption">
+        <h3>Developer at scale</h3>
+        <p>I write software.</p>
+        <p>I specialize in DevOps and Agile practices.</p>
+        <p>I write most of my software for Netlix in San Jose, but I also write software for fun and education.</p>
+        <p class="brand-links">
+          <a href="http://github.com/matschaffer"><i class="icon-github-sign"></i></a>
+          <a href="http://twitter.com/matschaffer"><i class="icon-twitter-sign"></i></a>
+          <a href="http://linkedin.com/in/matschaffer"><i class="icon-linkedin-sign"></i></a>
+          <a href="http://facebook.com/matschaffer"><i class="icon-facebook-sign"></i></a>
+          <a href="http://flickr.com/schapht"><i class="icon-flickr"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
