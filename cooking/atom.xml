@@ -1,5 +1,0 @@
----
-layout: atom
----
-{% assign posts = site.categories.cooking %}
-{% include posts.xml %}

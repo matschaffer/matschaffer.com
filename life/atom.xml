@@ -1,5 +1,0 @@
----
-layout: atom
----
-{% assign posts = site.categories.life %}
-{% include posts.xml %}
