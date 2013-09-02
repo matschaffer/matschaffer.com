@@ -50,7 +50,7 @@ task :redate do
   last = Dir["_posts/*.md"].last
   today = Time.now.strftime('%Y-%m-%d')
   redated = last.gsub(%r{^_posts/\d+-\d+-\d+}, "_posts/#{today}")
-  FileUtils.mv(last, redated)
+  FileUtils.mv(last, redated) unless last == redated
 end
 
 desc "Alias for redate and deploy"
