@@ -35,3 +35,9 @@ blockquote.linkable:hover {
   line-height: 55px;
   text-decoration: none;
 }
+
+.signup p {
+  line-height: 42px;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
