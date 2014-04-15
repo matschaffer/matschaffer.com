@@ -6,3 +6,4 @@ deploy_path: schapht@penguin.dreamhost.com:~/sites/matschaffer.com/jekyll
 exclude:
   - Rakefile
   - README
+  - app
