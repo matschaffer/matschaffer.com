@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: The Creep of Asynchronicity
 ---
@@ -10,10 +10,12 @@ Let's start with a function to get all the videos on a device that looks like th
 doSomethingWith(videos);{% endhighlight %}
 
 *Simple*. Pretty much what you would expect in a "device" API, right? But now let's assume that getVideos() requires a return trip to the web server to get the data. You have two options:
+
 <ol>
-	<li>Fly in the face of AJAX, make the call synchronously and lock up your UI.</li>
-	<li>Change the API to look something like this:</li>
+  <li>Fly in the face of AJAX, make the call synchronously and lock up your UI.</li>
+  <li>Change the API to look something like this:</li>
 </ol>
+
 {% highlight javascript %}device.getVideos(function(videos) {
   doSomethingWith(videos);
 }{% endhighlight %}
@@ -33,8 +35,8 @@ So the crux of my argument is that without some sort of **synchronization mechan
 {% highlight javascript %}function loadScripts(libraries, callback) {
   if (libraries.length > 0) {
     var lib = libraries.shift();
-    jQuery.getScript(lib, function() { 
-      loadScripts(libraries, callback); 
+    jQuery.getScript(lib, function() {
+      loadScripts(libraries, callback);
     });
   } else {
     callback();
