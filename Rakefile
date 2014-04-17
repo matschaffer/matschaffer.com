@@ -18,7 +18,6 @@ end
 desc "Run a build of jekyll"
 task :build do
   jekyll "build"
-  cp_r "app", "_site/app"
   cp "_htaccess", "_site/.htaccess"
 end
 
