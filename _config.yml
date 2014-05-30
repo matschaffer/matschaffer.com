@@ -2,7 +2,7 @@ url: http://matschaffer.com
 email: mat@schaffer.me
 permalink: /:year/:month/:title/
 pygments: true
-deploy_path: schapht@penguin.dreamhost.com:~/sites/matschaffer.com/jekyll
+deploy_path: schapht@bruichladdich.dreamhost.com:~/sites/matschaffer.com/jekyll
 exclude:
   - Rakefile
   - README
