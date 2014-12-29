@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'jekyll', github: 'mojombo/jekyll'
+gem 'jekyll'
 gem 'rake'

@@ -1,8 +1,8 @@
 require 'yaml'
 
-def jekyll(opts = nil)
+def jekyll(*opts)
   jekyll = Dir["_jekyll/bin/jekyll"].first || "jekyll"
-  sh [jekyll, opts].join(" ")
+  sh "bundle", "exec", jekyll, *opts
 end
 
 desc "Clean the built site"
@@ -12,7 +12,7 @@ end
 
 desc "Run Jekyll in server mode"
 task :serve do
-  jekyll "serve -w"
+  jekyll "serve", "-w"
 end
 
 desc "Run a build of jekyll"
