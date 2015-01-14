@@ -100,14 +100,15 @@ investigate the systems used to build that resource's response data.
 # OS & Runtime level metrics - the USE method
 
 * CPU
-* Memory
+* Memory & Garbage Collection
 * Disk
 * Network
 
 Of course, these are important to keep an eye on as well.
 But how their used will vary quite a bit between services.
 
-On the plus side there are many good tools and resources for monitoring these resources.
+On the plus side there are many good tools and resources for monitoring this stuff
+since most any environment will be capable of providing metrics on it.
 
 Rather that get into details here,
 I'll refer you to [the USE](http://www.brendangregg.com/usemethod.html) method from Brendan Gregg
