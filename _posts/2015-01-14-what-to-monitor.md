@@ -1,10 +1,8 @@
 ---
 layout: post
-title: What to monitor
+title: What should I monitor?
 abstract: I've been hearing the question "what should we monitor?" a fair bit around the Stellar Development Foundation dev floor. So here's my answer in a place where everyone can benefit.
 ---
-
-> What should I monitor?
 
 It's an old question.
 And one that can vary quite a bit from domain to domain.
