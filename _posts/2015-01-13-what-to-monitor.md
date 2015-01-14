@@ -27,6 +27,7 @@ broken down in a somewhat categorized format.
 Successful requests in the HTTP world take the form of something in the 100s-300s. Failed HTTP requests would usually be anything 400 and above.
 Most services have some way of designating "yes it worked" vs "no it didn't".
 Count those.
+
 Ideally count them just in front of what's calling the service,
 like in a client library for example.
 If counting at the client isn't feasible
