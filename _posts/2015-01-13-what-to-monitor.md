@@ -41,6 +41,10 @@ or the controller object that's servicing the request.
 
 # Deeper errors
 
+* Errors when calling backend services
+* Unhandled exceptions
+* Known application-specific error conditions (e.g., locked account)
+
 Not all error conditions manifest as a failed request.
 Typically a service has circuit breakers, fallbacks,
 or other mechanisms to deal with internal failures
