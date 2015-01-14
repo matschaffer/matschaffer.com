@@ -12,7 +12,7 @@ And one that can vary quite a bit from domain to domain.
 But for Web Operations
 there are some definite patterns I've come across.
 Most of these come from the last two years I spent working as a Reliability Engineer at Netflix.
-Even though we had 400+ discrete applications
+Even though we had hundreds of discrete applications
 when something broke you often found yourself looking at similar sets of metrics.
 
 So without further ado, here they are,
