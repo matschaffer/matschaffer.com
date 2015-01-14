@@ -126,10 +126,11 @@ distributed systems.
 So if you should find yourself in an unknown domain wondering what to monitor,
 try the USE method there too.
 
-# Next steps
+# Next steps - tooling
 
-Exactly what sort of software to use to track all these things is something I'll leave for another post.
-But if you're really just getting started here are a few workable options:
+There are a number of software packages that can help you track the sort of metrics covered here
+so I won't try to cover them in detail.
+But if you're really just getting started here are a few options I've had experience with:
 
 ## [Statsd](https://github.com/etsy/statsd/) -> [Graphite](http://graphite.wikidot.com/)
 
@@ -159,8 +160,8 @@ I look forward to more experimentation and blogging around Atlas in the near fut
 
 As stated above,
 metrics and monitoring can be a very application-specific thing
-so consider each of these in the context of your application and infrastructure.
-But I hope that for those of you just getting started,
+so consider everything in the context of your application and infrastructure.
+My hope is that for those of you still defining your operational metrics,
 this will provide a good basis for growing your own distributed system.
 
 If you have any comments or examples from your own system,
