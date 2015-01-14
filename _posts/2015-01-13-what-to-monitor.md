@@ -12,10 +12,11 @@ And can vary quite a bit from domain to domain.
 But in the case of web operations
 there are some definite patterns I've come across.
 Most of these come from the last two years I spent working as a Reliability Engineer at Netflix.
-Even though we had 400+ discrete applications there
-when something broke you found yourself looking at the same set of metrics.
+Even though we had 400+ discrete applications
+when something broke
+you often found yourself looking at similar sets of metrics.
 
-So without further adoo, here they are,
+So without further ado, here they are,
 broken down in a somewhat categorized format.
 
 # The basics
@@ -41,7 +42,7 @@ or the controller object that's servicing the request.
 
 # Deeper errors
 
-* Errors when calling backend services
+* Errors when calling back end services
 * Unhandled exceptions
 * Known application-specific error conditions (e.g., locked account)
 
@@ -86,7 +87,7 @@ investigate the system showing the latency.
 If it's a single resource
 investigate the systems used to build that resource's response data.
 
-# OS & Runtime level metrics
+# OS & Runtime level metrics - the USE method
 
 * CPU
 * Memory
@@ -115,7 +116,7 @@ distributed systems.
 
 As stated above,
 metrics and monitoring can be a very application-specific thing
-so consider each of these in the context of your application and infratructure.
+so consider each of these in the context of your application and infrastructure.
 But I hope that for those of you just getting started,
 this will provide a good basis for growing your own distributed system.
 If you have any comments or examples from your own system,
