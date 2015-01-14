@@ -5,6 +5,22 @@ abstract: Need to create an EC2-like local Ubuntu server?
           This post covers what you need to do step-by-step.
 ---
 
+> **Update 2015/01/14:**
+> This post is from 2011!
+> If you're looking for a minimal ubuntu running on VirtualBox
+> I highly recommend you check out [Vagrant](https://www.vagrantup.com/).
+> Once you have it installed you can get a minimal Ubuntu box running
+> with two easy commands
+
+{% highlight bash %}
+$ vagrant init ubuntu/trusty64
+$ vagrant up
+{% endhighlight %}
+
+> The instructions below still might work, but have only been tested on 10.04 LTS which is quite old at this point.
+
+---
+
 In my last post, I showed you how to build a CloudFoundry mini-cloud on an Ubuntu VirtualBox. Building that base image took some work and sorting through old blog posts, so I thought I'd post the instructions I ended up using.
 
 First, download a copy of the latest Ubuntu LTS (Long-Term-Support) image. This tutorial follows the 10.04 installation, later versions may vary.
