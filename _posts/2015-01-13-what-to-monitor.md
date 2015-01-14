@@ -126,6 +126,35 @@ distributed systems.
 So if you should find yourself in an unknown domain wondering what to monitor,
 try the USE method there too.
 
+# Next steps
+
+Exactly what sort of software to use to track all these things is something I'll leave for another post.
+But if you're really just getting started here are a few workable options:
+
+## [Statsd](https://github.com/etsy/statsd/) -> [Graphite](http://graphite.wikidot.com/)
+
+I did a [screencast](https://vimeo.com/ondemand/monitoringwithgraphite/84747550) on this approach almost a year ago.
+It's a fully open-source approach that's quite common and has a large ecosystem.
+
+## [Zabbix](http://www.zabbix.com/)
+
+The Stellar setup is mainly using this right now.
+It's also open source and has a rich feature set,
+but the surrouding ecosystem a a bit limited.
+
+## [MRTG](http://oss.oetiker.ch/mrtg)
+
+I'm not as familiar with MRTG,
+but it's been around a very long time
+and is still cited as one of the easier monitoring setups to get started with.
+
+## [Atlas from Netflix](https://github.com/Netflix/atlas)
+
+The system I'm most familiar with.
+I've seen it cover all of the above items while working at Netflix,
+but the open source offering is still new and somewhat raw.
+I look forward to more experimentation and blogging around Atlas in the near future.
+
 # Conclusion
 
 As stated above,
@@ -133,6 +162,7 @@ metrics and monitoring can be a very application-specific thing
 so consider each of these in the context of your application and infrastructure.
 But I hope that for those of you just getting started,
 this will provide a good basis for growing your own distributed system.
+
 If you have any comments or examples from your own system,
 I'd love to hear them.
 Feel free to leave a comment below
