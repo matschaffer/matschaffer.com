@@ -29,7 +29,7 @@ Most services have some way of designating "yes it worked" vs "no it didn't".
 Count those.
 
 Ideally count them from both the client and server side.
-For middle-tier services this can often go in a common client library,
+For middle-tier services the client-side counting can often go in a common client library,
 edge services may be able to count at the load balancer.
 If counting at the client isn't feasible
 you can count at the server side only,
