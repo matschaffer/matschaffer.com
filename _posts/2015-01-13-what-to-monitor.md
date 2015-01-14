@@ -51,40 +51,46 @@ Typically a service has circuit breakers, fallbacks,
 or other mechanisms to deal with internal failures
 without causing a user-visible error.
 But you'll want to count them even if the user doesn't see them.
+
 Watching for changes in deeper error trends can tell you
 when something is about to go wrong
 or when something is going wrong in a way that you can't see from your basic metrics.
+
 For example, you could have a failed remote call which causes key data to be omitted from the returned data.
 This would still be a 200 but the client may not be able to use the response.
 
 Count these on a per-second basis with some low-cardinality break down.
-Many systems have a set of internal error codes that can be useful when reporting metrics.
+Many systems have a set of internal error codes
+which will likely be reusable as a way to break down deeper error counts.
+Or in the case of circuit breakers,
+the name or class of the circuit is typically a good way to segment these errors.
 
 # Tracking performance
 
 * Latency distributions
 
 Now you may have a system which is always returning 200s,
-but if it goes from 150ms response times to 4000ms response times
+but if it goes from 150ms response times to 4000ms response times,
 you have a problem.
 
-Percentile distributions are common here.
+In addition to a simple max, min and average per second,
+percentile distributions are common here.
 You can start by looking at the 50th, 95th and 99.5th percentile
-which many tools support.
+which many tools (e.g., statsd) support.
 Bucketing by time
 (e.g., < 10ms, 100-500ms, > 500ms)
 is also useful since bucketed counters can be averaged across many servers and still retain some accuracy.
 Averaging the 95th percentile across a hundred machines is still useful,
 but doesn't tell you your actual 95th percentile for the whole fleet.
 Unfortunately this bucketed approach is a bit less common
-and requires you have a sense of how your service will perform ahead of time.
+probably since it requires you to have a sense of how your service will perform ahead of time.
 
 Much like the success counters,
 you'll want to break these down by resource if possible.
 Knowing where the latency is coming from can point you in the right direction a lot faster.
-If all resources are effected equally
+If all resources are effected equally,
 investigate the system showing the latency.
-If it's a single resource
+If it's a single resource,
 investigate the systems used to build that resource's response data.
 
 # OS & Runtime level metrics - the USE method
@@ -99,7 +105,7 @@ But how their used will vary quite a bit between services.
 
 On the plus side there are many good tools and resources for monitoring these resources.
 
-Rather that get into the details here,
+Rather that get into details here,
 I'll refer you to [the USE](http://www.brendangregg.com/usemethod.html) method from Brendan Gregg
 which is a really solid place to start when examining OS level resources.
 
@@ -112,6 +118,9 @@ distributed systems.
 * Saturation - are the requests backing up and becoming latent?
 * Errors - what errors were encountered servicing requests?
 
+So if you should find yourself in an unknown domain wondering what to monitor,
+try the USE method there too.
+
 # Conclusion
 
 As stated above,
@@ -122,4 +131,4 @@ this will provide a good basis for growing your own distributed system.
 If you have any comments or examples from your own system,
 I'd love to hear them.
 Feel free to leave a comment below
-or come find me in [#stellar-dev on freenode](irc://irc.freenode.net/#stellar-dev).
+or come find [matschaffer in #stellar-dev on freenode](irc://irc.freenode.net/#stellar-dev).
