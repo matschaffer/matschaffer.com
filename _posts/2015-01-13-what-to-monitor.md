@@ -117,4 +117,4 @@ this will provide a good basis for growing your own distributed system.
 If you have any comments or examples from your own system,
 I'd love to hear them.
 Feel free to leave a comment below
-or come find me [#stellar-dev on freenode](irc://irc.freenode.net/#stellar-dev).
+or come find me in [#stellar-dev on freenode](irc://irc.freenode.net/#stellar-dev).
