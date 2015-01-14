@@ -28,11 +28,13 @@ Successful requests in the HTTP world take the form of something in the 100s-300
 Most services have some way of designating "yes it worked" vs "no it didn't".
 Count those.
 
-Ideally count them just in front of what's calling the service,
-like in a client library for example.
+Ideally count them from both the client and server side.
+For middle-tier services this can often go in a common client library,
+edge services may be able to count at the load balancer.
 If counting at the client isn't feasible
-you can also count at the service itself,
-but you run the risk of missing unseen failures due to networking trouble.
+you can count at the server side only,
+but in that case you run the risk of missing unseen failures
+due to networking trouble.
 
 You can then make a ratio out of these `(failures / successes) * 100`
 and start tracking your availability against an [error budget](http://www.site-reliability-engineering.info/).
