@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/matschaffer
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://matschaffer.com
+  * I am matschaffer (https://keybase.io/matschaffer) on keybase.
+  * I have a public key with fingerprint 0F41 2290 38C3 B9C3 9C6E  0F1E 71EA CD00 4C06 389F
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "0f41229038c3b9c39c6e0f1e71eacd004c06389f",
+            "host": "keybase.io",
+            "key_id": "71eacd004c06389f",
+            "kid": "01013af290f70c6bf92e39a6379ad1ee1e6678c83dbd4aa480b7b2d3e75f2664ab6f0a",
+            "uid": "68b7db00d2af3b8eac78fd69fc15a600",
+            "username": "matschaffer"
+        },
+        "service": {
+            "hostname": "matschaffer.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1422432045,
+    "expire_in": 157680000,
+    "prev": "e324f5b8328cc942069d057773308b4616c902c7e482e07d991ab8bb8c3aea11",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.1
+Comment: https://keybase.io/crypto
+
+yMIbAnicbZJbSFRBGMdXLSVDiwj2QbodCQxN5lx25pytLLfSLAiLLormNjNnznq8
+nLPtHjdF16eIlnooMkKwQjOoLOkigVZ2sSQqCOlCdDHxoaeiB1O6EDZH6qnmZZjv
++3+/7zLfg4wUT3rSVMnBeGXTxjNJT+4VNXh2PDq5slkgtt4k+JuFWjZzGaYVYpFw
+xLQcwS8AQxElSQOySmWiUVmjkAFDZEhkmOoAKBRAWdUMIU+otqNuBMcQHGX5ps1t
+/BE0dW79j752xgFEIMrY4CkMBCgkhiYxWcNQRhrWRcZEBiFSqSrrRFcwVlRAEJF0
+mSGfIUGoYAINgDmuYQYHVYJ0AoAuYUMmKk+KVEOHmkFFH4YAuMIoi1i4nnF1PXai
+tBobBosI8TyBO2ImZe4U3Gb+FeVTu54TwhHbsaldx53VjhP2u7FOU9gV72ck+AcT
+JKal82HygBiLRE3bEvwiV1LHdLmiIkmKLAHFlyewxrAZYUHTVfgQVAE/bhoW40gm
+S4rhI6osqZRqigSgpgMfQkiWgUoUKEKqAYkipqgSA0jXNBETlRD+Y5hhURTcxvZZ
+tuCHvEwc4sioGbKw0xBhQvz+3cpZnqR0T+rsZHcdPOlz5v9dkrvP06ZLJ6PDQmdg
+IZo70XE2sBx+233u9ut1E1aixRmsGcg9WpZzvTBze+81taz4Vc+WqrqxeaX+qr6u
+Y2P+qa0D67N97dsXX32MNm4bf7uPfa54eN77Lvg+q+j9lyFJTE4u74EfV3t7Ry+c
+ZpVKv6db6x4ip/qWFO954Z2yZgcyi3d2bOqfXtoWCAZr9jxd+6kwltn9rHZR7o9f
+o8dTPjReGs46ZE9Xn/i6AJCqwc6hzd4Vw1dunF02cnF1dktFeDk90HprfNXNkpzJ
+NTWhxJ3UUtkcjx96mUhcHvyZW7o0wymf6kndeziQ2IDadrFJJdH6vf1dQVfKt9bz
+I0BpSztS8GbsN36OKB4=
+=18Um
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/matschaffer
+
+==================================================================
+
