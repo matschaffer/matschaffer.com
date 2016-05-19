@@ -4,7 +4,7 @@ https://keybase.io/matschaffer
 
 I hereby claim:
 
-  * I am an admin of http://matschaffer.com
+  * I am an admin of https://matschaffer.com
   * I am matschaffer (https://keybase.io/matschaffer) on keybase.
   * I have a public key with fingerprint 0F41 2290 38C3 B9C3 9C6E  0F1E 71EA CD00 4C06 389F
 
@@ -22,7 +22,7 @@ To claim this, I am signing this object:
         },
         "service": {
             "hostname": "matschaffer.com",
-            "protocol": "http:"
+            "protocol": "https:"
         },
         "type": "web_service_binding",
         "version": 1

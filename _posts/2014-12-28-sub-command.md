@@ -6,7 +6,7 @@ abstract: I recently joined the Stellar Development Foundation and decided to le
 
 When I started at Netflix almost two years ago, one of the first things that occured to me was "We could really use a general helper command." Other developers even agreed that it could be handy. I recalled Nick Quaranto's handy [sub](https://github.com/basecamp/sub) repository but with Netflix being a Java shop, I wasn't sure about introducing something that required a bash environment.
 
-A few months passed while I tinkered with doing something in Groovy. Then during one of our [hack days](http://techblog.netflix.com/2014/02/netflix-hack-day.html) I gave in and decided to use sub to make an `nf` command. With only a few commands in place, it quickly became part of my daily workflow. When I started at the [Stellar Development Foundation](http://stellar.org) I decided to start a `sub` command on day one. Even with just two commands I already use it daily.
+A few months passed while I tinkered with doing something in Groovy. Then during one of our [hack days](https://techblog.netflix.com/2014/02/netflix-hack-day.html) I gave in and decided to use sub to make an `nf` command. With only a few commands in place, it quickly became part of my daily workflow. When I started at the [Stellar Development Foundation](https://stellar.org) I decided to start a `sub` command on day one. Even with just two commands I already use it daily.
 
 > So what's this "sub" thing about?
 

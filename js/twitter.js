@@ -4,7 +4,7 @@ function updateTweets(json) {
   }
 
   function mentions(text) {
-    return text.replace(/\B@([_a-z0-9]+)/ig, '<a href="http://www.twitter.com/$1">@$1</a>');
+    return text.replace(/\B@([_a-z0-9]+)/ig, '<a href="https://www.twitter.com/$1">@$1</a>');
   }
 
   function relativeTime(timeString) {
@@ -30,7 +30,7 @@ function updateTweets(json) {
   }
 
   function source(tweet) {
-    return ['<a class="source" href="http://twitter.com/', tweet.user.screen_name, "/statuses/", tweet.id, '">',
+    return ['<a class="source" href="https://twitter.com/', tweet.user.screen_name, "/statuses/", tweet.id, '">',
             relativeTime(tweet.created_at), '</a>'].join('');
   }
 

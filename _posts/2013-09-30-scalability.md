@@ -38,4 +38,4 @@ This is data center mentality.
 
 To really leverage the cloud you need to be in an auto-scaling group. This will ensure that servers are easily replaced as they come and go (and they will). It also forces you make your application resilient against failures. Failures can happen anywhere but only the cloud approach offers a way to fully recover from failure automatically.
 
-These points are really just a sample of the things I've been learning recently. Hopefully they provide some food for thought. The [Netflix stack](http://netflix.github.io/) certainly has a number of components that can help with these items but there's plenty of room for improvement. Especially when it comes to bridging the gap between high scalability and rapid application development.
+These points are really just a sample of the things I've been learning recently. Hopefully they provide some food for thought. The [Netflix stack](https://netflix.github.io/) certainly has a number of components that can help with these items but there's plenty of room for improvement. Especially when it comes to bridging the gap between high scalability and rapid application development.

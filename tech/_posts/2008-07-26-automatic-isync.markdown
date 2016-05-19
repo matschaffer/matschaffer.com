@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Automatic iSync
 ---
@@ -9,33 +9,33 @@ Download his applescript [here](http://hohle.net/downloads/AutoSync.scpt).
 And here's the plist:
 
 {% highlight xml %}
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
- "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
-<plist version="1.0"> 
-<dict> 
-    <key>Disabled</key> 
-    <false/> 
-    <key>Label</key> 
-    <string>local.isync.sync</string> 
-    <key>LowPriorityIO</key> 
-    <true/> 
-    <key>Nice</key> 
-    <integer>1</integer> 
-    <key>ProgramArguments</key> 
-    <array> 
-        <string>osascript</string> 
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Disabled</key>
+    <false/>
+    <key>Label</key>
+    <string>local.isync.sync</string>
+    <key>LowPriorityIO</key>
+    <true/>
+    <key>Nice</key>
+    <integer>1</integer>
+    <key>ProgramArguments</key>
+    <array>
+        <string>osascript</string>
         <string>
           /Users/schapht/Library/Scripts/AutoSync.scpt
-        </string> 
-    </array> 
-    <key>StandardErrorPath</key> 
-    <string>/dev/null</string> 
-    <key>StandardOutPath</key> 
-    <string>/dev/null</string> 
-    <key>StartInterval</key> 
-    <integer>1800</integer> 
-</dict> 
+        </string>
+    </array>
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+    <key>StartInterval</key>
+    <integer>1800</integer>
+</dict>
 </plist>
 {% endhighlight %}
 

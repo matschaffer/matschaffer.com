@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
- 
+<feed xmlns="https://www.w3.org/2005/Atom">
+
  <title>Mat Schaffer's blog</title>
  <link href="{{ site.url }}/atom.xml" rel="self"/>
  <link href="{{ site.url }}/"/>
@@ -10,7 +10,7 @@
    <name>Mat Schaffer</name>
    <email>{{ site.email }}</email>
  </author>
- 
+
  {{ content }}
 
 </feed>

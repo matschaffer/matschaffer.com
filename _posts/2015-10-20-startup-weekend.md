@@ -4,7 +4,7 @@ title: A Startup Weekend retrospective
 abstract: I took the time to participate in the 2015 Nagoya Startup Weekend. Here are some thoughts on the event and startup weekends in general.
 ---
 
-The [Nagoya Startup Weekend](http://nagoya.startupweekend.org/) this year was exhausting yet rewarding.
+The [Nagoya Startup Weekend](https://nagoya.startupweekend.org/) this year was exhausting yet rewarding.
 
 To cap off the effort, I thought I'd write up a quick retro.
 

@@ -130,18 +130,18 @@ There are a number of software packages that can help you track the sort of metr
 so I won't try to cover them in detail.
 But if you're really just getting started here are a few options I've had experience with:
 
-## [Statsd](https://github.com/etsy/statsd/) -> [Graphite](http://graphite.wikidot.com/)
+## [Statsd](https://github.com/etsy/statsd/) -> [Graphite](https://graphite.wikidot.com/)
 
 I did a [screencast](https://vimeo.com/ondemand/monitoringwithgraphite/84747550) on this approach almost a year ago.
 It's a fully open-source approach that's quite common and has a large ecosystem.
 
-## [Zabbix](http://www.zabbix.com/)
+## [Zabbix](https://www.zabbix.com/)
 
 The Stellar setup is mainly using this right now.
 It's also open source and has a rich feature set,
 but the surrouding ecosystem a a bit limited.
 
-## [MRTG](http://oss.oetiker.ch/mrtg)
+## [MRTG](https://oss.oetiker.ch/mrtg)
 
 I'm not as familiar with MRTG,
 but it's been around a very long time

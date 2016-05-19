@@ -1,5 +1,8 @@
 RewriteEngine On
 
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
 # Place holders
 RewriteRule ^lqr$ / [R,L]
 
@@ -14,17 +17,17 @@ RewriteRule ^tag.*feed /atom.xml [R=301,L]
 RewriteRule ^tech/atom /atom.xml [R=301,L]
 
 # Pages
-RewriteRule ^(home/){0,1}projects http://github.com/matschaffer [R,L]
+RewriteRule ^(home/){0,1}projects https://github.com/matschaffer [R,L]
 RewriteRule ^tag / [R,L]
 RewriteRule ^home / [R=301,L]
 RewriteRule ^about / [R,L]
-RewriteRule ^weddingphotos http://www.flickr.com/photos/schapht/sets/72157602893305806/ [R,L]
-RewriteRule ^pictures http://www.flickr.com/photos/schapht/ [R,L]
-RewriteRule ^jppictures/Tri http://www.flickr.com/photos/schapht/sets/72157604772199320/ [R,L]
-RewriteRule ^jppictures/takayama http://www.flickr.com/photos/schapht/sets/72157604770766829/ [R,L]
+RewriteRule ^weddingphotos https://www.flickr.com/photos/schapht/sets/72157602893305806/ [R,L]
+RewriteRule ^pictures https://www.flickr.com/photos/schapht/ [R,L]
+RewriteRule ^jppictures/Tri https://www.flickr.com/photos/schapht/sets/72157604772199320/ [R,L]
+RewriteRule ^jppictures/takayama https://www.flickr.com/photos/schapht/sets/72157604770766829/ [R,L]
 RewriteRule ^files/NOK5300.tiff http://erka.kpumuk.info/mac-os-x/isync-and-nokia-5300/ [R,L]
 
 # Files
-RewriteRule files/DigitalWorldClock http://cloud.github.com/downloads/matschaffer/digital-world-clock/DigitalWorldClock-1.5.2.zip [R=301,L]
+RewriteRule files/DigitalWorldClock https://cloud.github.com/downloads/matschaffer/digital-world-clock/DigitalWorldClock-1.5.2.zip [R=301,L]
 
 ErrorDocument 404 /404.html
