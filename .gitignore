@@ -1,6 +1,3 @@
-.DS_Store
-*.swp
-_import
 _site
-_jekyll
+.sass-cache
 .jekyll-metadata

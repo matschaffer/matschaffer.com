@@ -1,8 +1,8 @@
-url: https://matschaffer.com
+title: Mat Schaffer
 email: mat@schaffer.me
-permalink: /:year/:month/:title/
-highlighter: pygments
-deploy_path: schapht@brickerville.dreamhost.com:~/sites/matschaffer.com/jekyll
-exclude:
-  - Rakefile
-  - README
+description: >-
+  Blog and contact information for Mat Schaffer.
+baseurl: ""
+url: https://matschaffer.com
+twitter_username: matschaffer
+github_username:  matschaffer

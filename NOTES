@@ -1,0 +1,15 @@
+Don't forget mailing list since I have a subscriber now
+
+
+Post idea: 60s perf cheatsheet
+
+uptime            -- load
+dmesg | tail      -- systemic errors
+vmstat 1          -- r (waiting for cpu), cpu usage, swap
+mpstat -P ALL 1   -- cpu imbalance
+pidstat 1         -- which pids are burning
+iostat -xz 1      -- block io activity, %util
+free -m           -- ensure some buffers & cache, zero would cause more disk i/o
+sar -n DEV 1      -- check for traffic near link max
+sar -n TCP,ETCP 1 -- check connections (active = out, passive = in) & retransmits
+top               -- confirm activitiy from previous command

@@ -1,6 +1,3 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll'
-gem 'pygments.rb'
-gem 'rake'
-gem 'highline'
+gem "github-pages"
