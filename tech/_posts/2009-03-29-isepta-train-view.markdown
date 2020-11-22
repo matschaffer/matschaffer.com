@@ -2,7 +2,7 @@
 layout: post
 title: iSepta Train View, my time with Dashcode
 ---
-<img class="left" title="iSepta Train View" src="http://matschaffer.com/files/iSeptaTrainView.png" />
+<img class="left" title="iSepta Train View" src="/files/iSeptaTrainView.png" />
 
 **UPDATE:** New version 1.1! <a href="http://cloud.github.com/downloads/matschaffer/isepta-train-view.wdgt/iSepta_Train_View-1.1.zip">Download it here</a>.
 

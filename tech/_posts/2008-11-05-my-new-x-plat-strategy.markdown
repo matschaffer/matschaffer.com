@@ -6,6 +6,6 @@ Thanks to a strong collaborative effort between myself and one of the members of
 
 It's capable of operating under a variety of modes including that of a 6, 9 or lower-case 'e'. This new initiative will be the focus of my coming year.
 
-<img class="center" title="X-Plat" src="http://farm4.static.flickr.com/3172/3006575668_73dc65b020.jpg" />
+<img class="center" title="X-Plat" src="//farm4.static.flickr.com/3172/3006575668_73dc65b020.jpg" />
 
 (How's that, <a href="http://paradox1x.org" rel="friend coworker">Karl</a>?)
