@@ -1,422 +1,525 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <link rel="shortcut icon" href="/ico/favicon.png">
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <title>Mat Schaffer</title>
     <style type="text/css">
-      body {
-        font-family: Calibri, sans-serif;
-        margin: 30px;
-        font-size: 11pt;
-        width: 620px;
-      }
-      a#name {
-        font-size: 22pt;
-        font-weight: bold;
-      }
-      a {
-        color: black;
-        text-decoration: none;
-      }
-      #contact, #objective {
-        margin: 30px auto;
-        text-align: center;
-      }
-      #contact {
-        position: relative;
-      }
-      #email, #phone {
-        position: absolute;
-        top: 0px;
-      }
-      #email {
-        left: 0px;
-      }
-      #phone {
-        right: 0px;
-      }
-      #objective {
-        font-style: italic;
-        margin: 10px auto;
-      }
-      h2 {
-        font-size: 14pt;
-        margin: 18px auto;
-        text-align: center;
-        margin-bottom: 5px;
-      }
-      #skills {
-        width: 200px;
-      }
-      #contributions {
-        width: 370px;
-      }
-      dt {
-        float: left;
-        width: 6em;
-      }
-      dd:before {
-        color: #aaa;
-        content: "– ";
-      }
-      dd {
-        margin-left: 6em;
-      }
-      #skills, .info {
-        float: left;
-      }
-      #contributions, .location {
-        float: right;
-      }
-      #skills ul, #contributions dl {
-        margin-top: 1em;
-      }
-      #skills ul {
-        line-height: 25px;
-        text-align: justify;
-      }
-      #skills li {
-        padding-right: 10px;
-      }
-      .compact {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      .compact li {
-        display: inline;
-      }
-      .compact li:after {
-        color: #777;
-        font-size: 11pt;
-      }
-      .ellipsis li:after {
-        content: " – ";
-      }
-      .comma li:after {
-        color: #000;
-        content: ", ";
-      }
-      .compact li:last-child:after {
-        content: "";
-      }
-      #experience, #education, .job ul, .school ul, .presentation {
-        clear: both;
-      }
-      #address p, .info p, .location p, .school p {
-        margin: 0;
-      }
-      .job.old {
-        display: none;
-      }
-      .job div, .school div {
-        margin: 5px 0 5px 0;
-      }
-      .job ul {
-        list-style: none;
-      }
-      .job li {
-        margin-bottom: 5px;
-      }
-      .job li:before {
-        content: "– ";
-      }
-      .info {
-        width: 250px;
-      }
-      .location {
-        width: 320px;
-        text-align: right;
-      }
-      #teaching .info {
-        width: 120px;
-      }
-      #teaching .location {
-        float: none;
-        width: 150px;
-      }
-      #teaching .location, #teaching .location p {
-        float: left;
-      }
+        body {
+            font-family: Calibri, sans-serif;
+            font-size: 11pt;
+            background-color: #ddd;
+        }
+
+        .page {
+            border: 1px solid #111;
+            padding: 30px;
+            margin: auto;
+            width: 720px;
+            background-color: #fff;
+        }
+
+        a#name {
+            font-size: 22pt;
+            font-weight: bold;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #contact, #objective {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        #contact {
+            position: relative;
+        }
+
+        #email, #phone {
+            position: absolute;
+            top: 0;
+        }
+
+        #email {
+            left: 0;
+        }
+
+        #phone {
+            right: 0;
+        }
+
+        #objective {
+            font-style: italic;
+            margin: 10px auto;
+        }
+
+        h2 {
+            font-size: 14pt;
+            text-align: center;
+            margin: 18px auto 5px;
+        }
+
+        #skills {
+            width: 200px;
+        }
+
+        #contributions {
+            width: 370px;
+        }
+
+        dt {
+            float: left;
+            width: 6em;
+        }
+
+        dd:before {
+            color: #aaa;
+            content: "– ";
+        }
+
+        dd {
+            margin-left: 6em;
+        }
+
+        #skills, .info {
+            float: left;
+        }
+
+        #contributions, .location {
+            float: right;
+        }
+
+        #skills ul, #contributions dl {
+            margin-top: 1em;
+        }
+
+        #skills ul {
+            line-height: 25px;
+            text-align: justify;
+        }
+
+        #skills li {
+            padding-right: 10px;
+        }
+
+        .compact {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .compact li {
+            display: inline;
+        }
+
+        .compact li:after {
+            color: #777;
+            font-size: 11pt;
+        }
+
+        .ellipsis li:after {
+            content: " – ";
+        }
+
+        .comma li:after {
+            color: #000;
+            content: ", ";
+        }
+
+        .compact li:last-child:after {
+            content: "";
+        }
+
+        #experience, #education, .job ul, .school ul, .presentation {
+            clear: both;
+        }
+
+        #address p, .info p, .location p, .school p {
+            margin: 0;
+        }
+
+        .job.old {
+            display: none;
+        }
+
+        .job div, .school div {
+            margin: 5px 0 5px 0;
+        }
+
+        .job ul {
+            list-style: none;
+        }
+
+        .job li {
+            margin-bottom: 5px;
+        }
+
+        .job li:before {
+            content: "– ";
+        }
+
+        .info {
+            width: 250px;
+        }
+
+        .location {
+            width: 320px;
+            text-align: right;
+        }
+
+        #teaching .info {
+            width: 120px;
+        }
+
+        #teaching .location {
+            float: none;
+            width: 150px;
+        }
+
+        #teaching .location, #teaching .location p {
+            float: left;
+        }
     </style>
-  </head>
-  <body>
+    <style type="text/css" media="print">
+        .page {
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
     <div id="contact">
-      <a id="name" href="https://matschaffer.com">Mat Schaffer</a>
-      <p id="email"><a href="mailto:mat@schaffer.me">mat@schaffer.me</a></p>
-      <p id="phone">+81-70-1629-9509</p>
+        <a id="name" href="https://matschaffer.com">Mat Schaffer</a>
+        <p id="email"><a href="mailto:mat@schaffer.me">mat@schaffer.me</a></p>
+        <p id="phone">+81-70-1629-9509</p>
     </div>
 
     <div id="objective">
-      A builder of approachable and reliable systems that handle unrelenting internet-scale traffic.
+        A builder of approachable and reliable systems that handle unrelenting internet-scale traffic.
     </div>
 
     <div id="experience">
-      <h2>Work Experience</h2>
+        <h2>Work Experience</h2>
 
-      <div class="job">
-        <div class="info">
-          <p>August 2015 - Present</p>
-          <p>Reliability Engineer</p>
+        <div class="job">
+            <div class="info">
+                <p>August 2018 - Present</p>
+                <p>Senior Manager</p>
+            </div>
+            <div class="location">
+                <p>Elastic</p>
+                <p>Yamanashi, Japan</p>
+            </div>
+            <ul>
+                <li></li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Freelance</p>
-          <p>Gifu, Japan</p>
-        </div>
-        <ul>
-          <li>Improve AWS site reliability through automation using Chef, Consul, Terraform and CloudFormation</li>
-          <li>Reduce downtime by creating new insights into key performance metrics using Grafana, Graphite, Prometheus, and CloudWatch</li>
-          <li>Exercise backup and recovery plans for data storage systems on PostgreSQL and Cassandra</li>
-          <li>Optimize cloud costs through performance analysis and full-stack testing</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="info">
-          <p>December 2014 - July 2015</p>
-          <p>Reliability Engineer</p>
+        <div class="job">
+            <div class="info">
+                <p>August 2016 - August 2018</p>
+                <p>Principal SRE</p>
+            </div>
+            <div class="location">
+                <p>Elastic</p>
+                <p>Yamanashi, Japan</p>
+            </div>
+            <ul>
+                <li></li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Stellar Development Foundation</p>
-          <p>Gifu, Japan</p>
-        </div>
-        <ul>
-          <li>Developed &amp; maintained infrastructure and delivery pipelines for large open source projects</li>
-          <li>Improved operational insight using the latest in monitoring tools</li>
-          <li>Implemented cutting edge deployment scenarios leveraging Docker, Packer and Ansible</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="info">
-          <p>April 2013 - December 2014</p>
-          <p>Reliability Engineer</p>
+        <div class="job">
+            <div class="info">
+                <p>August 2015 - August 2016</p>
+                <p>Reliability Engineer</p>
+            </div>
+            <div class="location">
+                <p>Freelance</p>
+                <p>Gifu, Japan</p>
+            </div>
+            <ul>
+                <li>Improve AWS site reliability through automation using Chef, Consul, Terraform and CloudFormation
+                </li>
+                <li>Reduce downtime by creating new insights into key performance metrics using Grafana, Graphite,
+                    Prometheus, and CloudWatch
+                </li>
+                <li>Exercise backup and recovery plans for data storage systems on PostgreSQL and Cassandra</li>
+                <li>Optimize cloud costs through performance analysis and full-stack testing</li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Netflix</p>
-          <p>San Jose, CA</p>
-        </div>
-        <ul>
-          <li>Built new tools and visualizations using the NetflixOSS stack to increase system reliability</li>
-          <li>Analyzed deep causes of production failures and provided reports for the entire company</li>
-          <li>Improved company-wide processes and tools for in-depth monitoring and automated continuous delivery</li>
-          <li>Led calls and guide engineering teams through triage and resolution of complex production issues that affected millions of customers</li>
-          <li>Educated new and veteran teams on constantly evolving best practices when running Java web technologies such as Tomcat, Netty, Guice and Jersey</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="info">
-          <p>September 2010 - February 2013</p>
-          <p>Co-Founder, Developer</p>
+        <div class="job">
+            <div class="info">
+                <p>December 2014 - July 2015</p>
+                <p>Reliability Engineer</p>
+            </div>
+            <div class="location">
+                <p>Stellar Development Foundation</p>
+                <p>Gifu, Japan</p>
+            </div>
+            <ul>
+                <li>Developed &amp; maintained infrastructure and delivery pipelines for large open source projects</li>
+                <li>Improved operational insight using the latest in monitoring tools</li>
+                <li>Implemented cutting edge deployment scenarios leveraging Docker, Packer and Ansible</li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Mashion, LLC</p>
-          <p>Philadelphia, PA</p>
-        </div>
-        <ul>
-          <li>Automated provisioning and deployment of large scale systems with Chef</li>
-          <li>Developed custom Rails and Sinatra applications running on Heroku and EC2</li>
-          <li>Managed business development, sales pipeline, accounting and payroll for a growing consultancy</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="info">
-          <p>March 2010 - September 2010</p>
-          <p>Senior Developer</p>
+        <div class="job">
+            <div class="info">
+                <p>April 2013 - December 2014</p>
+                <p>Reliability Engineer</p>
+            </div>
+            <div class="location">
+                <p>Netflix</p>
+                <p>San Jose, CA</p>
+            </div>
+            <ul>
+                <li>Built new tools and visualizations using the NetflixOSS stack to increase system reliability</li>
+                <li>Analyzed deep causes of production failures and provided reports for the entire company</li>
+                <li>Improved company-wide processes and tools for in-depth monitoring and automated continuous
+                    delivery
+                </li>
+                <li>Led calls and guide engineering teams through triage and resolution of complex production issues
+                    that affected millions of customers
+                </li>
+                <li>Educated new and veteran teams on constantly evolving best practices when running Java web
+                    technologies such as Tomcat, Netty, Guice and Jersey
+                </li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Hoopla Software</p>
-          <p>Glen Mills, PA</p>
-        </div>
-        <ul>
-          <li>Managed product backlog and requirements using Agile practices and Pivotal Tracker</li>
-          <li>Optimized development workflow using Rake, ERB, Node.js and jQuery</li>
-          <li>Coordinated provisioning of Rails, MySQL and Redis using Chef</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="info">
-          <p>April 2007 - March 2010</p>
-          <p>Senior Software Engineer</p>
+        <div class="job">
+            <div class="info">
+                <p>September 2010 - February 2013</p>
+                <p>Co-Founder, Developer</p>
+            </div>
+            <div class="location">
+                <p>Mashion, LLC</p>
+                <p>Philadelphia, PA</p>
+            </div>
+            <ul>
+                <li>Automated provisioning and deployment of large scale systems with Chef</li>
+                <li>Developed custom Rails and Sinatra applications running on Heroku and EC2</li>
+                <li>Managed business development, sales pipeline, accounting and payroll for a growing consultancy</li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Comcast Interactive Media</p>
-          <p>Philadelphia, PA</p>
-        </div>
-        <ul>
-          <li>Developed rich in-browser applications such as MyDVR and TiVo Scheduler using jQuery as well as standards-based HTML and CSS</li>
-          <li>Organized daily scrums, product backlog and sprint planning sessions as the Scrum Master for the cross-platform product team</li>
-          <li>Implemented prototypes for build-time JavaScript optimizations using Ruby and Maven</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="info">
-          <p>August 2005 - May 2007</p>
-          <p>Programmer Analyst</p>
+        <div class="job">
+            <div class="info">
+                <p>March 2010 - September 2010</p>
+                <p>Senior Developer</p>
+            </div>
+            <div class="location">
+                <p>Hoopla Software</p>
+                <p>Glen Mills, PA</p>
+            </div>
+            <ul>
+                <li>Managed product backlog and requirements using Agile practices and Pivotal Tracker</li>
+                <li>Optimized development workflow using Rake, ERB, Node.js and jQuery</li>
+                <li>Coordinated provisioning of Rails, MySQL and Redis using Chef</li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Comcast</p>
-          <p>Philadelphia, PA</p>
-        </div>
-        <ul>
-          <li>Developed a beta-tester community portal using Linux, Apache, MySQL, and PHP</li>
-          <li>Worked with vendors including Cisco, Netgear, RCA and Nintendo to fix TCP issues using tools such as Wireshark and Cacti</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="info">
-          <p>June 2004 - July 2005</p>
-          <p>English Teacher</p>
+        <div class="job">
+            <div class="info">
+                <p>April 2007 - March 2010</p>
+                <p>Senior Software Engineer</p>
+            </div>
+            <div class="location">
+                <p>Comcast Interactive Media</p>
+                <p>Philadelphia, PA</p>
+            </div>
+            <ul>
+                <li>Developed rich in-browser applications such as MyDVR and TiVo Scheduler using jQuery as well as
+                    standards-based HTML and CSS
+                </li>
+                <li>Organized daily scrums, product backlog and sprint planning sessions as the Scrum Master for the
+                    cross-platform product team
+                </li>
+                <li>Implemented prototypes for build-time JavaScript optimizations using Ruby and Maven</li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Aeon</p>
-          <p>Ichinomiya, Japan</p>
+
+        <div class="job">
+            <div class="info">
+                <p>August 2005 - May 2007</p>
+                <p>Programmer Analyst</p>
+            </div>
+            <div class="location">
+                <p>Comcast</p>
+                <p>Philadelphia, PA</p>
+            </div>
+            <ul>
+                <li>Developed a beta-tester community portal using Linux, Apache, MySQL, and PHP</li>
+                <li>Worked with vendors including Cisco, Netgear, RCA and Nintendo to fix TCP issues using tools such as
+                    Wireshark and Cacti
+                </li>
+            </ul>
         </div>
-        <ul>
-          <li>Designed lesson plans, and taught English classes for students ranging from beginner to advanced speaking levels</li>
-          <li>Interviewed prospective students and counseled existing students on study and organizational techniques</li>
-        </ul>
-      </div>
-      <div class="job old">
-        <div class="info">
-          <p>November 2003 - May 2004</p>
-          <p>Product Tester</p>
+
+        <div class="job">
+            <div class="info">
+                <p>June 2004 - July 2005</p>
+                <p>English Teacher</p>
+            </div>
+            <div class="location">
+                <p>Aeon</p>
+                <p>Ichinomiya, Japan</p>
+            </div>
+            <ul>
+                <li>Designed lesson plans, and taught English classes for students ranging from beginner to advanced
+                    speaking levels
+                </li>
+                <li>Interviewed prospective students and counseled existing students on study and organizational
+                    techniques
+                </li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Comcast</p>
-          <p>Philadelphia, PA</p>
+        <div class="job old">
+            <div class="info">
+                <p>November 2003 - May 2004</p>
+                <p>Product Tester</p>
+            </div>
+            <div class="location">
+                <p>Comcast</p>
+                <p>Philadelphia, PA</p>
+            </div>
+            <ul>
+                <li>Deployed server software such as Bugzilla and WS-FTPd to expedite testing processes</li>
+                <li>Designed testing strategies to be used in product certification for products ranging from cable
+                    modems to video email systems
+                </li>
+                <li>Educated coworkers on bug tracking and test script creation practices</li>
+            </ul>
         </div>
-        <ul>
-          <li>Deployed server software such as Bugzilla and WS-FTPd to expedite testing processes</li>
-          <li>Designed testing strategies to be used in product certification for products ranging from cable modems to video email systems</li>
-          <li>Educated coworkers on bug tracking and test script creation practices</li>
-        </ul>
-      </div>
-      <div class="job old">
-        <div class="info">
-          <p>September 2000 - December 2002</p>
-          <p>Systems Engineer</p>
+        <div class="job old">
+            <div class="info">
+                <p>September 2000 - December 2002</p>
+                <p>Systems Engineer</p>
+            </div>
+            <div class="location">
+                <p>Comcast Business Communications</p>
+                <p>Philadelphia, PA</p>
+            </div>
+            <ul>
+                <li>Researched and implemented a Linux-based small business server product containing Squid, Samba and
+                    Sendmail systems
+                </li>
+                <li>Managed distributed development in Perl and PHP with developers from Sun Microsystems</li>
+                <li>Built an email system using Sendmail and Bash to handle the large scale @Home network migration
+                    without losing customer email
+                </li>
+            </ul>
         </div>
-        <div class="location">
-          <p>Comcast Business Communications</p>
-          <p>Philadelphia, PA</p>
-        </div>
-        <ul>
-          <li>Researched and implemented a Linux-based small business server product containing Squid, Samba and Sendmail systems</li>
-          <li>Managed distributed development in Perl and PHP with developers from Sun Microsystems</li>
-          <li>Built an email system using Sendmail and Bash to handle the large scale @Home network migration without losing customer email</li>
-        </ul>
-      </div>
     </div>
 
     <div id="teaching">
-      <h2>Speaking Experience</h2>
-      <div class="presentation">
-        <div class="info">
-          <p>2014</p>
+        <h2>Speaking Experience</h2>
+        <div class="presentation">
+            <div class="info">
+                <p>2014</p>
+            </div>
+            <div class="location">
+                <p>SRECon</p>
+            </div>
+            <p>Disaster Preparedness and Recovery</p>
         </div>
-        <div class="location">
-          <p>SRECon</p>
+        <div class="presentation">
+            <div class="info">
+                <p>2012-2013</p>
+            </div>
+            <div class="location">
+                <p>UPenn</p>
+            </div>
+            <p>Web development with Ruby on Rails</p>
         </div>
-        <p>Disaster Preparedness and Recovery</p>
-      </div>
-      <div class="presentation">
-        <div class="info">
-          <p>2012-2013</p>
+        <div class="presentation">
+            <div class="info">
+                <p>2011, 2012</p>
+            </div>
+            <div class="location">
+                <p>Wharton Web Conf</p>
+            </div>
+            <p>Ruby on Rails, Infrastructure as code with Chef</p>
         </div>
-        <div class="location">
-          <p>UPenn</p>
-        </div>
-        <p>Web development with Ruby on Rails</p>
-      </div>
-      <div class="presentation">
-        <div class="info">
-          <p>2011, 2012</p>
-        </div>
-        <div class="location">
-          <p>Wharton Web Conf</p>
-        </div>
-        <p>Ruby on Rails, Infrastructure as code with Chef</p>
-      </div>
     </div>
 
     <div id="education">
-      <h2>Education</h2>
-      <div class="school">
-        <div class="info">
-          <p>BS, Computer Science</p>
-          <p>December, 2003</p>
+        <h2>Education</h2>
+        <div class="school">
+            <div class="info">
+                <p>BS, Computer Science</p>
+                <p>December, 2003</p>
+            </div>
+            <div class="location">
+                <p>Drexel University</p>
+                <p>Philadelphia, PA</p>
+            </div>
         </div>
-        <div class="location">
-          <p>Drexel University</p>
-          <p>Philadelphia, PA</p>
-        </div>
-      </div>
     </div>
 
     <div id="skills">
-      <h2>Tools & Skills</h2>
-      <ul class="compact">
-        <li>NetflixOSS</li>
-        <li>AWS</li>
-        <li>Java</li>
-        <li>Docker</li>
-        <li>Asgard</li>
-        <li>PostgreSQL</li>
-        <li>Hadoop</li>
-        <li>Ruby</li>
-        <li>Hystrix</li>
-        <li>Python</li>
-        <li>Groovy</li>
-        <li>REST</li>
-        <li>Bash/ZSH</li>
-        <li>Apache</li>
-        <li>Nginx</li>
-        <li>Git</li>
-        <li>Chef</li>
-        <li>Graphite</li>
-        <li>Linux</li>
-        <li>Solaris</li>
-        <li>HTML5</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>TDD/BDD</li>
-        <li>Agile</li>
-        <li>DevOps</li>
-      </ul>
+        <h2>Tools & Skills</h2>
+        <ul class="compact">
+            <li>NetflixOSS</li>
+            <li>AWS</li>
+            <li>Java</li>
+            <li>Docker</li>
+            <li>Asgard</li>
+            <li>PostgreSQL</li>
+            <li>Hadoop</li>
+            <li>Ruby</li>
+            <li>Hystrix</li>
+            <li>Python</li>
+            <li>Groovy</li>
+            <li>REST</li>
+            <li>Bash/ZSH</li>
+            <li>Apache</li>
+            <li>Nginx</li>
+            <li>Git</li>
+            <li>Chef</li>
+            <li>Graphite</li>
+            <li>Linux</li>
+            <li>Solaris</li>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TDD/BDD</li>
+            <li>Agile</li>
+            <li>DevOps</li>
+        </ul>
     </div>
 
     <div id="contributions">
-      <h2>Contributions</h2>
-      <dl>
-        <dt><a href="https://github.com/matschaffer/knife-solo">Knife Solo</a></dt><dd>primary maintainer</dd>
-        <dt><a href="https://github.com/grafana/grafana">Grafana</a></dt><dd>improved CloudWatch metric support</dd>
-        <dt><a href="https://github.com/docker/libswarm">Libswarm</a></dt><dd>Early testing for ec2 docker service</dd></dt>
-        <dt><a href="https://github.com/square/cube">Cube</a></dt><dd>Added multi-tenancy support</dd>
-        <dt><a href="https://jruby.org/">JRuby</a></dt><dd>assisted in correcting C extension support</dd>
-      </dl>
-      <ul class="compact comma">
-        <li>ReviewBoard</li>
-        <li>Ruby Facets</li>
-        <li>Maven</li>
-        <li>Mechanize</li>
-        <li>Scruffy</li>
-        <li>Zundle</li>
-        <li>Gruff</li>
-        <li>Rcov</li>
-        <li>Overtone</li>
-        <li>Redcar</li>
-      </ul>
-      </p>
-      <p>Samples available online at <a href="https://github.com/matschaffer">github.com/matschaffer</a>.</p>
+        <h2>Contributions</h2>
+        <dl>
+            <dt><a href="https://github.com/matschaffer/knife-solo">Knife Solo</a></dt>
+            <dd>primary maintainer</dd>
+            <dt><a href="https://github.com/grafana/grafana">Grafana</a></dt>
+            <dd>improved CloudWatch metric support</dd>
+            <dt><a href="https://github.com/docker/libswarm">Libswarm</a></dt>
+            <dd>Early testing for ec2 docker service</dd>
+            <dt><a href="https://github.com/square/cube">Cube</a></dt>
+            <dd>Added multi-tenancy support</dd>
+            <dt><a href="https://jruby.org/">JRuby</a></dt>
+            <dd>assisted in correcting C extension support</dd>
+        </dl>
+        <ul class="compact comma">
+            <li>ReviewBoard</li>
+            <li>Ruby Facets</li>
+            <li>Maven</li>
+            <li>Mechanize</li>
+            <li>Scruffy</li>
+            <li>Gruff</li>
+            <li>Rcov</li>
+            <li>Overtone</li>
+        </ul>
+        <p>Samples available online at <a href="https://github.com/matschaffer">github.com/matschaffer</a>.</p>
     </div>
-
-
-  </body>
+</div>
+</body>
 </html>
