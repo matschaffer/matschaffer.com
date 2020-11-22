@@ -6,3 +6,5 @@ baseurl: ""
 url: https://matschaffer.com
 twitter_username: matschaffer
 github_username:  matschaffer
+exclude:
+  - .idea

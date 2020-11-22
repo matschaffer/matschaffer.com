@@ -12,7 +12,7 @@ end
 
 desc "Run Jekyll in server mode"
 task :serve do
-  jekyll "serve", "-w"
+  jekyll "serve"
 end
 
 desc "Run a build of jekyll"
