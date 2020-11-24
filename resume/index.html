@@ -3,7 +3,7 @@
 <head>
     <link rel="shortcut icon" href="/ico/favicon.png">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <title>Mat Schaffer</title>
+    <title>Mat Schaffer - Resume</title>
     <style type="text/css">
         body {
             font-family: Calibri, sans-serif;
@@ -13,7 +13,7 @@
 
         .page {
             border: 1px solid #111;
-            padding: 30px;
+            padding: 30px 50px 30px;
             margin: auto;
             width: 720px;
             background-color: #fff;
@@ -133,7 +133,7 @@
             content: "";
         }
 
-        #experience, #education, .job ul, .school ul, .presentation {
+        #experience, #education, #volunteering, .job ul, .school ul, .presentation, .clear {
             clear: both;
         }
 
@@ -170,16 +170,16 @@
             text-align: right;
         }
 
-        #teaching .info {
+        #speaking .info {
             width: 120px;
         }
 
-        #teaching .location {
+        #speaking .location {
             float: none;
             width: 150px;
         }
 
-        #teaching .location, #teaching .location p {
+        #speaking .location, #speaking .location p {
             float: left;
         }
     </style>
@@ -206,43 +206,44 @@
 
         <div class="job">
             <div class="info">
-                <p>August 2018 - Present</p>
-                <p>Senior Manager</p>
+                <p>January 2019 - Present</p>
+                <p>Team Lead - Cloud Observability</p>
             </div>
             <div class="location">
                 <p>Elastic</p>
-                <p>Yamanashi, Japan</p>
+                <p>Japan - Remote</p>
             </div>
             <ul>
-                <li>Contact for details.</li>
+                <li>Manage for a global 7-person team that handles TBs/day of incoming observability data</li>
+                <li>Coach on developing software and operational practices</li>
+                <li>Prioritize incoming work and negotiate feature requests with the larger Elastic organization</li>
+                <li>Coordinate cross-team sessions for knowledge sharing and deciding longer term strategies</li>
+                <li>Make compensation decisions and balance team schedule</li>
+                <li>Prototype new techniques and technologies for increasing team scale and reliability</li>
             </ul>
         </div>
 
         <div class="job">
             <div class="info">
-                <p>July 2014 - Present</p>
-                <p>Volunteer SRE</p>
-            </div>
-            <div class="location">
-                <p>Safecast</p>
-                <p>Yamanashi, Japan</p>
-            </div>
-            <ul>
-                <li>Contact for details.</li>
-            </ul>
-        </div>
-
-        <div class="job">
-            <div class="info">
-                <p>August 2016 - August 2018</p>
+                <p>August 2016 - January 2019</p>
                 <p>Principal SRE</p>
             </div>
             <div class="location">
                 <p>Elastic</p>
-                <p>Yamanashi, Japan</p>
+                <p>Japan - Remote</p>
             </div>
             <ul>
-                <li>Contact for details.</li>
+                <li>Built and launched the first Google Cloud Platform regions for Elastic Cloud</li>
+                <li>Introduced Terraform for management of Infrastructure as Code. Grew codebase beyond 50k LOC</li>
+                <li>Created fio-based disk performance test suite and used it with AWS engineers to certify i3 instances
+                    for customer use
+                </li>
+                <li>Deployed and maintained Elasticsearch container management across more than 4 cloud providers (AWS,
+                    GCP, Azure, IBM), more than 50 regions
+                </li>
+                <li>Maintained and extended Scala APIs and Golang clients for orchestrating thousands of customer
+                    Elasticsearch deployments
+                </li>
             </ul>
         </div>
 
@@ -253,7 +254,7 @@
             </div>
             <div class="location">
                 <p>Freelance</p>
-                <p>Gifu, Japan</p>
+                <p>Japan - Remote</p>
             </div>
             <ul>
                 <li>Improve AWS site reliability through automation using Chef, Consul, Terraform and CloudFormation
@@ -273,7 +274,7 @@
             </div>
             <div class="location">
                 <p>Stellar Development Foundation</p>
-                <p>Gifu, Japan</p>
+                <p>Japan - Remote</p>
             </div>
             <ul>
                 <li>Developed &amp; maintained infrastructure and delivery pipelines for large open source projects</li>
@@ -431,7 +432,27 @@
         </div>
     </div>
 
-    <div id="teaching">
+    <div id="volunteering">
+        <h2>Volunteering</h2>
+
+        <div class="job">
+            <div class="info">
+                <p>July 2014 - Present</p>
+                <p>Volunteer SRE</p>
+            </div>
+            <div class="location">
+                <p>Safecast</p>
+                <p>Japan - Remote</p>
+            </div>
+            <ul>
+                <li>Maintain data ingest and storage pipeline for nearly 200MM environmental measurements</li>
+                <li>Train new volunteers on software development and operations</li>
+                <li>Research and implement new approaches for high-scale geographical data processing</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="speaking">
         <h2>Speaking Experience</h2>
         <div class="presentation">
             <div class="info">
@@ -488,28 +509,29 @@
     <div id="skills">
         <h2>Tools & Skills</h2>
         <ul class="compact">
+            <li>Elasticsearch</li>
+            <li>Kibana</li>
             <li>NetflixOSS</li>
             <li>AWS</li>
             <li>Java</li>
+            <li>Scala</li>
+            <li>Kotlin</li>
             <li>Docker</li>
-            <li>Asgard</li>
             <li>PostgreSQL</li>
             <li>Hadoop</li>
             <li>Ruby</li>
-            <li>Hystrix</li>
             <li>Python</li>
-            <li>Groovy</li>
             <li>REST</li>
             <li>Bash/ZSH</li>
             <li>Apache</li>
             <li>Nginx</li>
             <li>Git</li>
-            <li>Chef</li>
+            <li>Puppet</li>
             <li>Graphite</li>
             <li>Linux</li>
             <li>Solaris</li>
-            <li>HTML5</li>
-            <li>CSS</li>
+            <li>HTML/CSS</li>
+            <li>Typescript</li>
             <li>JavaScript</li>
             <li>TDD/BDD</li>
             <li>Agile</li>
@@ -520,31 +542,19 @@
     <div id="contributions">
         <h2>Contributions</h2>
         <dl>
-            <dt><a href="https://github.com/matschaffer/knife-solo">Knife Solo</a></dt>
-            <dd>primary maintainer</dd>
+            <dt><a href="https://github.com/docker/libswarm">Elasticsearch</a></dt>
+            <dd>pre-release testing and feedback</dd>
             <dt><a href="https://github.com/grafana/grafana">Grafana</a></dt>
-            <dd>improved CloudWatch metric support</dd>
-            <dt><a href="https://github.com/docker/libswarm">Libswarm</a></dt>
-            <dd>Early testing for ec2 docker service</dd>
-            <dt><a href="https://github.com/square/cube">Cube</a></dt>
-            <dd>Added multi-tenancy support</dd>
+            <dd>CloudWatch metrics and map rendering</dd>
+            <dt><a href="https://plantuml.com/">PlantUML</a></dt>
+            <dd>diagramming Elastic Stack components</dd>
             <dt><a href="https://jruby.org/">JRuby</a></dt>
-            <dd>assisted in correcting C extension support</dd>
+            <dd>C extension support</dd>
         </dl>
-        <ul class="compact comma">
-            <li>ReviewBoard</li>
-            <li>Ruby Facets</li>
-            <li>Maven</li>
-            <li>Mechanize</li>
-            <li>Scruffy</li>
-            <li>Gruff</li>
-            <li>Rcov</li>
-            <li>Overtone</li>
-        </ul>
         <p>Samples available online at <a href="https://github.com/matschaffer">github.com/matschaffer</a>.</p>
     </div>
 
-    <div style="clear: both;"></div>
+    <div class="clear"></div>
 </div>
 </body>
 </html>
