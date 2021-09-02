@@ -6,7 +6,7 @@ abstract: Today I saw that Docker Desktop will be requiring a subscription, so I
 
 This morning, like many developers, I woke up to an email telling me that [Docker Desktop](https://www.docker.com/blog/updating-product-subscriptions/) would now require a subscription for me to use at work.
 
-While I'm sure my company could handle the expense, I wasn't happy to about the likely overhead and wanted to explore my options. 
+While I'm sure my company could handle the expense, I wasn't happy to about the likely overhead and wanted to explore my options.
 
 So I took a deep breath and hit the uninstall button.
 
@@ -15,6 +15,8 @@ So I took a deep breath and hit the uninstall button.
 This part was easy. But how should we get docker functionality back?
 
 [Docker Machine](https://docs.docker.com/machine/) is an option I've used before Docker Desktop and it doesn't seem to be covered under the new licensing requirements. It's also available via homebrew, so it's an easy option to try out.
+
+## The basics
 
 ```bash
 # Install it
@@ -40,6 +42,8 @@ And seems like we're in business.
 
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
+
+## Running docker compose
 
 Next I'll try a docker compose test tool I often use.
 
@@ -101,14 +105,82 @@ default   *        virtualbox   Running   tcp://192.168.99.100:2376           v1
 
 ![Browser showing kibana running on 192.168.99.100:5601](/images/docker-machine-kibana.png){:width="80%"}
 
-So it's not perfect. A few clear cons:
+## What about kubernetes?
 
-* I'm missing the fancy new `docker compose` subcommand.
-* I have to keep VirtualBox installed functional. This can be a pain especially since last I checked it conflicts with the [Intel Power Gadget](https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html).
-* I can't use `localhost` which may cause link confusion between me and co-workers.
-* The docker-machine VM needed a tweak, and maybe more overtime.
+I also had a `kind` based tool I needed to run. So let's try that:
 
-But it should do the job.
+```
+❯ brew install kind kubectl
+...
+❯ kind create cluster
+Creating cluster "kind" ...
+ ✓ Ensuring node image (kindest/node:v1.21.1) 🖼
+ ✓ Preparing nodes 📦
+ ✓ Writing configuration 📜
+ ✗ Starting control-plane 🕹️
+ERROR: failed to create cluster: failed to init node with kubeadm: command "docker exec --privileged kind-control-plane kubeadm init --skip-phases=preflight --config=/kind/kubeadm.conf --skip-token-print --v=6" failed with error: exit status 1
+Command Output: I0901 23:58:29.674676     210 initconfiguration.go:246] loading configuration from "/kind/kubeadm.conf"
+```
+
+More bumps.
+
+For this one I managed to google my way to [github.com/microsoft/WSL#4189](https://github.com/microsoft/WSL/issues/4189#issuecomment-851919194) which mentioned that missing systemd could be an issue. So I'll try that fix.
+
+```
+❯ docker-machine ssh default
+   ( '>')
+  /) TC (\   Core is distributed with ABSOLUTELY NO WARRANTY.
+ (/-_--_-\)           www.tinycorelinux.net
+
+docker@default:~$ sudo -i
+root@default:~# mkdir /sys/fs/cgroup/systemd
+root@default:~# mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
+```
+
+I suspect this will also need an fstab entry to survive reboot. :)
+
+This did the trick to get kind booted normally. But of course, more trouble:
+
+```
+❯ kubectl cluster-info --context kind-kind
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+The connection to the server 127.0.0.1:57999 was refused - did you specify the right host or port?
+```
+
+To fix this up we'll need to create kind with the right server address. So we'll create a `kind.yaml`.
+
+```yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+networking:
+  apiServerAddress: "192.168.99.101"
+  apiServerPort: 57999
+```
+
+The IP address here is from `docker-machine ip` and the port number is whatever the last attempt's error used.
+
+Strangely enough if you don't specify a port, it will fail to assign a random one:
+
+```
+ERROR: failed to create cluster: failed to get random host port for port mapping: listen tcp 192.168.99.101:0: bind: can't assign requested address
+```
+
+With the config in place I was able to get kind booted with `kind create cluster --config kind.yaml` and finally run a successful `kubectl apply`.
+
+## Wrap up
+
+It's not perfect. A few clear cons:
+
+- I'm missing the fancy new `docker compose` subcommand.
+- I have to keep VirtualBox installed functional. This can be a pain especially since last I checked it conflicts with the [Intel Power Gadget](https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html).
+- I can't use `localhost` which may cause link confusion between me and co-workers.
+- The docker-machine VM needed a some tweaks for some software packages (elasticsearch, kind). I suspect there'll be more as time goes on.
+
+But it should do the job at least.
+
+If my company ends up buying Docker Desktop licenses tomorrow, I'll surely go back. But I'm glad I have this post handy to refer back to should I need it.
 
 I'll post updates as I find out more. Thanks for following along with me!
 
+**2021/09/02**: Added section on kind & kubernetes
