@@ -36,7 +36,7 @@ After a bit more digging, I found [XRG](https://gaucho.software/Products/XRG/) w
 
 With some new tools in hand, I started working and sure enough I could see that the throttling kicked in when my dGPU got up to around 80C.
 
-![Two metric tools showing correlation between dGPU temp and CPU speed](/images/dgpu-heat-vs-cpu-speed.jpeg)
+![Two metric tools showing correlation between dGPU temp and CPU speed](/images/dgpu-heat-vs-cpu-speed.jpeg){:width="80%"}
 
 About this time, I also needed to do some work on VirtualBox which conflicted with the Intel Power Gadget. So I found this as a replacement to watch my core speeds, which XRG couldn't.
 
