@@ -60,7 +60,7 @@ Of course, I'm glad I still have a working laptop, but I'd also like to have a f
 
 So far the best workaround I've found is the combination of a cooling stand (with fans) and keeping the air conditioning a little uncomfortably cold.
 
-Or if I can live without my external display for a bit, I'll unplug my external display. Usually until whatever big CPU job (often kibana bootstrap or optimizer work) is done then I can plug it back in.
+Or if I can live without my external display for a bit, I'll unplug it and work on the laptop display. Usually until whatever big CPU job (often kibana bootstrap or optimizer work) is done then I can plug it back in.
 
 I'd love to take it to the Apple Store to check if the fans are okay. It could be they're dusty as Sergey Stadnik found in [this post](https://ozmoroz.com/2020/07/macos-kernel-tasks/). But my location, COVID19 and vaccine shortages eliminate that possibility.
 
