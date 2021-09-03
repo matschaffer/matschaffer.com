@@ -34,6 +34,10 @@ I [tweeted this out](https://twitter.com/matschaffer/status/1430393627579093000)
 
 After a bit more digging, I found [XRG](https://gaucho.software/Products/XRG/) which included configurable temperature sensor graphs, including the dGPU.
 
+With some new tools in hand, I started working and sure enough I could see that the throttling kicked in when my dGPU got up to around 80C.
+
+![Two metric tools showing correlation between dGPU temp and CPU speed](/images/dgpu-heat-vs-cpu-speed.png)
+
 About this time, I also needed to do some work on VirtualBox which conflicted with the Intel Power Gadget. So I found this as a replacement to watch my core speeds, which XRG couldn't.
 
 ```
@@ -44,9 +48,7 @@ CPU Average frequency as fraction of nominal: 105.58% (2533.88 Mhz)
 ...
 ```
 
-With some new tools in hand, I started working and sure enough I could see that the throttling kicked in when my dGPU got up to around 80C.
-
-The throttling is easy to spot this way because all the cores will sync to the same reduced clock speed even when processes are putting demand on the CPU.
+The throttling is actually easier to spot this way because all the cores will sync to the same reduced clock speed even when processes are putting demand on the CPU.
 
 ```
 CPU Average frequency as fraction of nominal: 75.00% (1800.00 Mhz)
