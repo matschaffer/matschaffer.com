@@ -54,9 +54,13 @@ CPU Average frequency as fraction of nominal: 75.00% (1800.00 Mhz)
 CPU Average frequency as fraction of nominal: 75.00% (1800.00 Mhz)
 ```
 
+Now I'm far from a hardware heat-management expert here. But from various posts I can see that the CPU and GPU share a heat sink. And the dGPU is required to drive the external display. So what seems to be happening is that when display is plugged in, the dGPU starts heating up. If the system decides the GPU is too hot for the CPU to cool itself, it slows down the CPU to avoid overheating and potential damage.
+
+Of course, I'm glad I still have a working laptop, but I'd also like to have a fast laptop :)
+
 So far the best workaround I've found is the combination of a cooling stand (with fans) and keeping the air conditioning a little uncomfortably cold.
 
-Or depending on the task. I'll unplug my external display until the heavy CPU job is done (often some sort of build, or re-index).
+Or if I can live without my external display for a bit, I'll unplug my external display. Usually until whatever big CPU job (often kibana bootstrap or optimizer work) is done then I can plug it back in.
 
 I'd love to take it to the Apple Store to check if the fans are okay. It could be they're dusty as Sergey Stadnik found in [this post](https://ozmoroz.com/2020/07/macos-kernel-tasks/). But my location, COVID19 and vaccine shortages eliminate that possibility.
 
