@@ -2,7 +2,7 @@
 layout: post
 title: Removing code is a feature
 ---
-<a href="http://www.thinkgeek.com/homeoffice/gear/a639/images/"><img title="Delete" src="http://www.thinkgeek.com/images/products/additional/large/delete_key_eraser_inhand.jpg" alt="" width="400" height="400" /></a>
+<a href="http://www.thinkgeek.com/homeoffice/gear/a639/images/"><img title="Delete" src="https://www.thinkgeek.com/images/products/additional/large/delete_key_eraser_inhand.jpg" alt="" width="400" height="400" /></a>
 
 I saw a beautiful thing this evening in the <a href="http://blog.zenspider.com/2009/03/zentest-version-400-has-been-r.html">ZenTest 4.0.0 release notes</a> (emphasis mine):
 

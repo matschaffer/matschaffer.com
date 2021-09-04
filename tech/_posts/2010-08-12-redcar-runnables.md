@@ -21,7 +21,7 @@ Like I said Runnables lets you run commands inside Redcar. It let's you set up t
 * Commands: These become list items that you can click on to run. You can view by selecting Project -> Runnables from the menu.
   They look like this.
   
-<img class="center" src="http://cl.ly/2599033874449b819500/content" />
+<img class="center" src="https://cl.ly/2599033874449b819500/content" />
 
 * File Runners: These are commands that get run when you hit `Ctrl+R` if your current file matches a regex.
 
