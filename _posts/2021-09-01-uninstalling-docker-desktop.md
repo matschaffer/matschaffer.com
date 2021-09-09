@@ -22,8 +22,10 @@ This part was easy. But how should we get docker functionality back?
 # Install it
 brew install docker-machine
 
-# Provision a default machine (my docker desktop was set to 12GB of memory, so adjust for your machine)
-docker-machine create --virtualbox-cpu-count 4  --virtualbox-memory 12288 default
+# Provision a default machine
+# My docker desktop was set to 12GB of memory, and I'm setting disk to 100GB to accommodate the many images I have to work with.
+# Please adjust for your machine.
+docker-machine create --virtualbox-cpu-count 4  --virtualbox-memory 12288 --virtualbox-disk-size 102400 default
 
 # Add this to my zshrc to export the env if docker-machine is present
 command -v docker-machine > /dev/null 2>&1 && eval "$(docker-machine env default)"
@@ -134,10 +136,10 @@ For this one I managed to google my way to [github.com/microsoft/WSL#4189](https
 
 docker@default:~$ sudo -i
 root@default:~# mkdir /sys/fs/cgroup/systemd
+root@default:~# echo 'mkdir /sys/fs/cgroup/systemd' >> /var/lib/boot2docker/profile
 root@default:~# mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
+root@default:~# echo 'mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd' >> /var/lib/boot2docker/profile
 ```
-
-I suspect this will also need an fstab entry to survive reboot. :)
 
 This did the trick to get kind booted normally. But of course, more trouble:
 
