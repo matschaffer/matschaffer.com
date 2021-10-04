@@ -127,7 +127,9 @@ Finally put the resulting binary into your path:
 $ sudo mv filebeat /usr/local/bin/filebeat
 ```
 
-And finally set up a service to keep it running. I originally extracted this definition from the filebeat deb package and modified the executable path.
+If you ran into build trouble, feel free to post a note on the [filebeat forum](https://discuss.elastic.co/tags/c/elastic-stack/beats/28/filebeat). You can even mention me, though I suspect other engineers will jump in before I even notice.
+
+And finally I set up a systemd service to keep it running. I originally extracted this definition from the filebeat deb package and modified the executable path.
 
 ```
 $ cat /etc/systemd/system/filebeat.service
@@ -150,10 +152,10 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-And enable filebeat
+And enable the service.
 
 ```
-sudo systemctl enable filebeat
+$ sudo systemctl enable filebeat
 ```
 
 Now if you have any tests in `/var/log/speedtest`, they should end up in `filebeat-*` in your Elasticsearch cluster.
