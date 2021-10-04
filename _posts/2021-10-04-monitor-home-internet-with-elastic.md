@@ -51,7 +51,9 @@ If you don't happen to work at Elastic, you'll get at 14 day free trial. If you 
 
 #### Setting up the Ookla CLI
 
-Installation here is easy. Just grab a copy from [the speedtest cli download page](https://www.speedtest.net/apps/cli) for your process (arm in my case) and untar it. Move the binary somewhere handy (like `/usr/local/bin`). One small "gotcha" is that each user has to run it once to accept the EULA which will write intto `$HOME/.config/ookla`). No big deal for my setup, but if you have users without home directories or something, watch out for it.
+Installation here is easy. Just grab a copy from [the speedtest cli download page](https://www.speedtest.net/apps/cli) for your process (arm in my case) and untar it. Move the binary somewhere handy (like `/usr/local/bin`).
+
+One small "gotcha" is that each user has to run it once with no args to accept the EULA which will write into `$HOME/.config/ookla`). No big deal for my setup, but if you have users without home directories or something, watch out for it.
 
 To run the speed test and get json output, you'll need a server ID. You can get one like this:
 
