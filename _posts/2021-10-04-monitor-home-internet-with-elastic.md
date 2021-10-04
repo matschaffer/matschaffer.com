@@ -36,7 +36,7 @@ Additionally this was a mongodb+node setup on docker compose. Easy to do on my M
 
 ### Using the Elastic Stack
 
-I mentioned the idea in passing to one of my coworkers, [Toby Brain](https://github.com/tobio) who said he did something similar with the Ookla CLI shipping data to Elasticsearch.
+I mentioned my testing in passing to one of my coworkers, [Toby Brain](https://github.com/tobio), who said he did something similar with the Ookla CLI shipping data to Elasticsearch.
 
 This sounded great for the following reasons:
 
