@@ -86,6 +86,80 @@ $ cat /etc/cron.d/speedtest
 
 #### Setting up filebeat
 
+The basic configuration if filebeat was simple. Just this:
+
+```
+$ cat /etc/filebeat/filebeat.yml
+cloud.id: "(your deployment's cloud ID)"
+cloud.auth: "(your cluster's user):(your cluster's password)"
+
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/speedtests*
+    scan_frequency: 1m
+    json.keys_under_root: true
+```
+
+Getting filebeat set up on the Raspberry Pi was much more complicated. Elastic doesn't have official binaries on the download page, so I ended up compiling from source. This required golang >= 1.16 which also isn't availble from Raspbian's apt repositories. So I did this the old fashioned way.
+
+First grab the armv6 version of [golang](https://golang.org/dl/), unpack that into `$HOME`.
+
+Export the go path to where you extracted it and go binaries onto your shell path:
+
+```
+$ export GOPATH=$HOME/go
+$ export PATH="$PATH:$HOME/go/bin"
+```
+
+Grab the beats source and get into the filebeat directory and run make:
+
+```
+$ git clone https://github.com/elastic/beats ${GOPATH}/src/github.com/elastic/beats
+$ cd ${GOPATH}/src/github.com/elastic/beats/filebeat
+$ make
+```
+
+Finally put the resulting binary into your path:
+
+```
+$ sudo mv filebeat /usr/local/bin/filebeat
+```
+
+And finally set up a service to keep it running. I originally extracted this definition from the filebeat deb package and modified the executable path.
+
+```
+$ cat /etc/systemd/system/filebeat.service
+[Unit]
+Description=Filebeat sends log files to Logstash or directly to Elasticsearch.
+Documentation=https://www.elastic.co/beats/filebeat
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+
+Environment="GODEBUG='madvdontneed=1'"
+Environment="BEAT_LOG_OPTS="
+Environment="BEAT_CONFIG_OPTS=-c /etc/filebeat/filebeat.yml"
+Environment="BEAT_PATH_OPTS=--path.home /usr/share/filebeat --path.config /etc/filebeat --path.data /var/lib/filebeat --path.logs /var/log/filebeat"
+ExecStart=/usr/local/bin/filebeat --environment systemd $BEAT_LOG_OPTS $BEAT_CONFIG_OPTS $BEAT_PATH_OPTS
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+And enable filebeat
+
+```
+sudo systemctl enable filebeat
+```
+
+Now if you have any tests in `/var/log/speedtest`, they should end up in `filebeat-*` in your Elasticsearch cluster.
+
+A little more involved than `docker compose up`, for sure. But now we have a much more stable setup plus all the facilites of kibana at our disposal for analysis.
+
 #### Graphing
 
 ## Results and Conclusion
