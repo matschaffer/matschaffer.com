@@ -51,6 +51,37 @@ If you don't happen to work at Elastic, you'll get at 14 day free trial. If you 
 
 #### Setting up the Ookla CLI
 
+Installation here is easy. Just grab a copy from [the speedtest cli download page](https://www.speedtest.net/apps/cli) for your process (arm in my case) and untar it. Move the binary somewhere handy (like `/usr/local/bin`). One small "gotcha" is that each user has to run it once to accept the EULA which will write intto `$HOME/.config/ookla`). No big deal for my setup, but if you have users without home directories or something, watch out for it.
+
+To run the speed test and get json output, you'll need a server ID. You can get one like this:
+
+```
+$ speedtest -L
+Closest servers:
+
+    ID  Name                           Location             Country
+==============================================================================
+ 45080  ド田舎ネットワーク！By mino7r86. Kawagoe              Japan
+  6087  Allied Telesis Capital Corporation Fussa-shi            Japan
+  6492  denpa893                       Tokyo                Japan
+ 41592  NEVERLOSS LLC.                 Tokyo                Japan
+ 42083  LiyingNetwork                  Tokyo                Japan
+ 42297  Netprotect                     Tokyo                Japan
+ 43063  k-kohei.jp                     Tokyo                Japan
+ 43744  SERVG.NET MG-Network           Tokyo                Japan
+ 45012  NEROCLOUD INC.                 Tokyo                Japan
+ 44988  Misaka Network, Inc.           Tokyo                Japan
+```
+
+I was also interested in non-local test server. This was trickier, but I found an [Ookla XML feed](https://c.speedtest.net/speedtest-servers-static.php) that returns different lists based on your location. So I checked that while on a US VPN to get a second server ID.
+
+With two IDs handy, I set up a cron job and that was it:
+
+```
+$ cat /etc/cron.d/speedtest
+10 * * * * root (/usr/local/bin/speedtest -s 42297 -f json; /usr/local/bin/speedtest -s 10979 -f json) >> /var/log/speedtests
+```
+
 #### Setting up filebeat
 
 #### Graphing
