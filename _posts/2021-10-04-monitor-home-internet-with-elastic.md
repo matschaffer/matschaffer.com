@@ -47,7 +47,7 @@ This sounded great for the following reasons:
 
 This was easy! Just go to [cloud.elastic.co](https://cloud.elastic.co/), sign up and make a cluster.
 
-If you don't happen to work at Elastic, you'll get at 14 day free trial. If you want more, you could start a [paying plan](https://www.elastic.co/pricing/), or [consider getting a job at Elastic](https://www.elastic.co/about/careers/) ;) . Or of course you could also host your own elasticsearch and kibana on a spare machine with enough resources (but probably not a Raspberry Pi). The data set is quite small. Only about 600kb for 3 days so far.
+If you don't happen to work at Elastic, you'll get at 14 day free trial. If you want more, you could start a [paying plan](https://www.elastic.co/pricing/), or [consider getting a job at Elastic](https://www.elastic.co/about/careers/) ;). Or of course you could also host your own elasticsearch and kibana on a spare machine with enough resources (but probably not a Raspberry Pi). The data set is quite small. Only about 600kb for 3 days so far.
 
 #### Setting up the Ookla CLI
 
