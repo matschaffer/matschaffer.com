@@ -16,7 +16,7 @@ But it's gone on so long now I decided to at least get scientific about it.
 
 ## The approach
 
-I figured if I could have something like [÷Ookla Speedtest](https://www.speedtest.net/) running continually and storing data, I could demonstrate and quantify the issue.
+I figured if I could have something like [Ookla Speedtest](https://www.speedtest.net/) running continually and storing data, I could demonstrate and quantify the issue.
 
 But what to use?
 
