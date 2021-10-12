@@ -168,6 +168,35 @@ A little more involved than `docker compose up`, for sure. But now we have a muc
 
 #### Graphing
 
+There's a bunch of data in the speedtest CLI JSON payload, but I was mainly interested in looking and downstream and upstream speeds over time.
+
+The speeds recorded were a bit confusing at first. The main parts of the data look like this:
+
+```json
+{
+  "type": "result",
+  "timestamp": "2021-10-12T05:10:16Z",
+  "ping": { "jitter": 1.218, "latency": 8.1850000000000005 },
+  "download": { "bandwidth": 3457698, "bytes": 15579024, "elapsed": 4404 },
+  "upload": { "bandwidth": 5292178, "bytes": 23912512, "elapsed": 4502 },
+  "isp": "ARTERIA Networks Corporation"
+}
+```
+
+That `download.bandwidth` number is listed in bytes per second, but ISPs usually sell in megabits per second (Mbps). Thankfully Kibana lens now has formulas, so the conversion is easy. Just divide by 8, then 1000000. Or here I've used multiply to keep the formula short and simple.
+
+```
+multiply(median(download.bandwidth), 0.000008)
+```
+
+Same for downstream and we're in business!
+
 ## Results and Conclusion
 
+With data in hand I can now see when my internet speeds get slow (mostly noon and 9p) and plan accordingly. Also interesting is that my upstream stays consistently high.
+
+Once the covid situation calms down I may contact my ISP about other options, but I suspect issue extends beyond just my local ISP.
+
 ![screenshot showing internet speeds with a clear downstream dip in the evenings](/images/kibana-speed-data.png){:width="80%"}
+
+If you'd like to use the same dashboard, I've exported it here for import into your own kibana: [internet-speeds-dashboard.ndjson](/files/internet-speeds-dashboard.ndjson)
