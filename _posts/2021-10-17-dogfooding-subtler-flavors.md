@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The subtler flavors of dogfooding
-abstract: dogfooding-subtler-flavors
+abstract: Dogfooding is an often-cited best practice, but is it always the best path forward? Here are some cases where it can cause trouble.
 ---
 
 Dogfooding.
