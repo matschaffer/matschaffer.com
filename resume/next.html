@@ -14,7 +14,8 @@
 
     body {
       font-family: Calibri, sans-serif;
-      font-size: 14px;
+      margin: 10px 15px 10px 15px;
+      font-size: 22px;
       color: var(--black);
       background-color: var(--white);
     }
@@ -22,7 +23,9 @@
     @media (min-width: 992px) {
       body {
         background-color: var(--gray-bg);
+        font-size: 14px;
       }
+
       .resume {
         border: 1px solid var(--black);
         padding: 30px 50px 30px;
@@ -107,16 +110,19 @@
       grid-template-columns: 1fr 2fr;
     }
 
-    .compact {
-      margin: 0;
-      padding: 0;
+    ul.compact  {
+      padding-inline-start: 0;
       list-style: none;
       text-align: justify;
     }
 
     .compact li {
       display: inline;
-      padding-right: 1em;
+      padding: 0 3px 5px 0;
+    }
+
+    .oss dl {
+      margin-left: 5px;
     }
 
     .old {
