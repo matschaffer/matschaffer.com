@@ -19,6 +19,7 @@ desc "Run a build of jekyll"
 task :build do
   jekyll "build"
   cp "_htaccess", "_site/.htaccess"
+  cp "_well-known", "_site/.well-known"
 end
 
 desc "Deploy to deploy_path specified in config.yml"
