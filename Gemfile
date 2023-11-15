@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~>4.1.1"
+ruby "3.2.2"
+
+gem "jekyll"
 gem "rake"
 gem "highline"
