@@ -8,3 +8,5 @@ twitter_username: matschaffer
 github_username:  matschaffer
 exclude:
   - .idea
+include:
+  - .well-known
